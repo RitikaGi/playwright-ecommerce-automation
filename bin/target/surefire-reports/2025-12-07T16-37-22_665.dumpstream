@@ -1,0 +1,45 @@
+# Created at 2025-12-07T16:37:47.710
+Error: Download failed: server returned code 400 body 'GatewayExceptionResponse'. URL: https://playwright.azureedge.net/builds/chromium/1080/chromium-win64.zip
+
+# Created at 2025-12-07T16:37:47.712
+    at IncomingMessage.handleError (C:\Users\Pc\AppData\Local\Temp\playwright-java-3301532653224642051\package\lib\server\registry\oopDownloadBrowserMain.js:62:23)
+
+# Created at 2025-12-07T16:37:47.713
+    at IncomingMessage.emit (node:events:526:35)
+
+# Created at 2025-12-07T16:37:47.714
+    at endReadableNT (node:internal/streams/readable:1359:12)
+
+# Created at 2025-12-07T16:37:47.727
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+
+# Created at 2025-12-07T16:38:04.764
+Error: Download failed: server returned code 400 body 'GatewayExceptionResponse'. URL: https://playwright.azureedge.net/builds/firefox/1424/firefox-win64.zip
+
+# Created at 2025-12-07T16:38:04.765
+    at IncomingMessage.handleError (C:\Users\Pc\AppData\Local\Temp\playwright-java-3301532653224642051\package\lib\server\registry\oopDownloadBrowserMain.js:62:23)
+
+# Created at 2025-12-07T16:38:04.765
+    at IncomingMessage.emit (node:events:526:35)
+
+# Created at 2025-12-07T16:38:04.768
+    at endReadableNT (node:internal/streams/readable:1359:12)
+
+# Created at 2025-12-07T16:38:04.772
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+
+# Created at 2025-12-07T16:38:20.334
+Error: Download failed: server returned code 400 body 'GatewayExceptionResponse'. URL: https://playwright.azureedge.net/builds/webkit/1908/webkit-win64.zip
+
+# Created at 2025-12-07T16:38:20.337
+    at IncomingMessage.handleError (C:\Users\Pc\AppData\Local\Temp\playwright-java-3301532653224642051\package\lib\server\registry\oopDownloadBrowserMain.js:62:23)
+
+# Created at 2025-12-07T16:38:20.337
+    at IncomingMessage.emit (node:events:526:35)
+
+# Created at 2025-12-07T16:38:20.340
+    at endReadableNT (node:internal/streams/readable:1359:12)
+
+# Created at 2025-12-07T16:38:20.344
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+
