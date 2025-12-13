@@ -5,9 +5,9 @@
     <classes>
       <class name="com.playwright.EcommerceTest">
         <methods>
-          <include name="loginWebsite"/>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="addProductToCart"/>
         </methods>
       </class> <!-- com.playwright.EcommerceTest -->
     </classes>
