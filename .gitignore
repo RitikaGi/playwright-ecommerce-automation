@@ -1,0 +1,19 @@
+# Trace files - don't commit to Git
+trace*.zip
+test-traces/
+
+# Screenshots
+test-screenshots/
+
+# Test output
+test-output/
+
+# Maven build files
+target/
+
+# IDE files
+.classpath
+.project
+.settings/
+.idea/
+*.iml

@@ -6,6 +6,7 @@
       <class name="com.playwright.EcommerceTest">
         <methods>
           <include name="tearDown"/>
+          <include name="removeProductFromCart"/>
           <include name="setUp"/>
           <include name="addProductToCart"/>
         </methods>

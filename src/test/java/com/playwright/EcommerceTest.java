@@ -1,71 +1,39 @@
 package com.playwright;
-
-import com.microsoft.playwright.Locator;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class EcommerceTest extends BaseTest{
 	
 	
-//	@Test 
-//	public void loginWebsite()  {
-//	    login();
-//	    System.out.println(page.url());
-//		Assert.assertTrue(page.url().contains("inventory.html"));
-//		 
-//	}
-	
 	@Test 
 	public void addProductToCart() {
 		login();
+		Assert.assertTrue(page.url().contains("/inventory.html"));
+		inventoryPage.addOnesieToCart();
+		Assert.assertTrue(inventoryPage.isCartBadgeVisible());
+		Assert.assertEquals("1", inventoryPage.getCartBadgeCount());
 		
-		Locator addToCart=page.locator("button#add-to-cart-sauce-labs-onesie");
-		addToCart.click();
-		
-		Locator badge = page.locator(".shopping_cart_badge");
-		Assert.assertTrue(badge.isVisible());
-		Assert.assertEquals("1", badge.textContent());
-		
-		Locator cartIcon = page.locator(".shopping_cart_link");
-		cartIcon.click();
-		
-		Locator removeFromCart=page.locator("button#remove-sauce-labs-onesie");
-		Assert.assertTrue(removeFromCart.isVisible());
-		
-		Locator itemName= page.locator(".inventory_item_name");
-        Assert.assertEquals("Sauce Labs Onesie", itemName.textContent());
-        
-        Locator itemPrice = page.locator(".inventory_item_price");
-        Assert.assertEquals("$7.99", itemPrice.textContent()); 
-        
-		
-		
+		inventoryPage.clickCartIcon();
+		Assert.assertTrue(cartPage.isRemoveButtonVisible());
+		Assert.assertEquals("Sauce Labs Onesie", cartPage.getItemName());
+		Assert.assertEquals("$7.99", cartPage.getItemPrice());
+	
 	}
 	
 	@Test 
 	public void removeProductFromCart()  {
 		login();
-		Locator addToCart=page.locator("button#add-to-cart-sauce-labs-onesie");
-		addToCart.click();
-		Locator badge = page.locator(".shopping_cart_badge");
-		badge.click();
+		//add Product to cart
+		inventoryPage.addOnesieToCart();
+		inventoryPage.clickCartIcon();
+		//verify on cart page
 		Assert.assertTrue(page.url().contains("/cart.html"));
-		Locator removeFromCart=page.locator("button#remove-sauce-labs-onesie");
-		removeFromCart.click();
-		
+		//remove item from cart
+		cartPage.removeProductFromCart();
+		//verify remove button is not visible
+		Assert.assertFalse(cartPage.isRemoveButtonVisible());
 		System.out.println("Item is removed from cart");
 		
 	}
-	
-//	@Test
-//	public void checkOut() {
-//		login();
-//		Locator addToCart=page.locator("button#add-to-cart-sauce-labs-onesie");
-//		addToCart.click();
-//		Locator badge = page.locator(".shopping_cart_badge");
-//		badge.click();
-//	}
-	
-	
 
 }
