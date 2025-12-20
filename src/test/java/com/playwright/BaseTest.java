@@ -30,7 +30,7 @@ public class BaseTest {
 	protected LoginPage loginPage;
 	protected InventoryPage inventoryPage;
 	protected CartPage cartPage;
-	
+	protected static final String BASE_URL = "https://www.saucedemo.com/";
 	
 	
 		@BeforeMethod
@@ -57,13 +57,13 @@ public class BaseTest {
 			cartPage = new CartPage(page);
 		}	
 		
-		protected void login() {
-			String url = ConfigReader.getProperty("baseUrl");
-	        String username = ConfigReader.getProperty("username");
-	        String password = ConfigReader.getProperty("password");
-			//Login
-			loginPage.login(url, username, password);
-		}
+//		protected void login() {
+//			String url = ConfigReader.getProperty("baseUrl");
+//	        String username = ConfigReader.getProperty("username");
+//	        String password = ConfigReader.getProperty("password");
+//			//Login
+//			loginPage.login(url, username, password);
+//		}
 		
 		
 		@AfterMethod

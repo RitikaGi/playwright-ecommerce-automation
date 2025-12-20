@@ -25,6 +25,14 @@ public class LoginPage {
 		page.locator(".submit-button").click();
 	}
 	
+	public String getErrorMessage() {
+		return page.locator("[data-test='error']").textContent();
+	}
+	
+	public boolean isErrorMessageVisible() {
+		return page.locator("[data-test='error']").isVisible();
+	}
+	
 	
 	public void login(String url,String username,String password) {
 		//Login

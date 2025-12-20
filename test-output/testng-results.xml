@@ -1,51 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-14T14:01:09 IST" name="Default suite" finished-at="2025-12-14T14:01:24 IST" duration-ms="15681">
+  <suite started-at="2025-12-20T19:06:44 IST" name="Default suite" finished-at="2025-12-20T19:07:20 IST" duration-ms="35612">
     <groups>
     </groups>
-    <test started-at="2025-12-14T14:01:09 IST" name="Default test" finished-at="2025-12-14T14:01:24 IST" duration-ms="15681">
-      <class name="com.playwright.EcommerceTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.playwright.EcommerceTest@35e2d654]" started-at="2025-12-14T14:01:09 IST" name="setUp" finished-at="2025-12-14T14:01:20 IST" duration-ms="10945" status="PASS">
+    <test started-at="2025-12-20T19:06:44 IST" name="Default test" finished-at="2025-12-20T19:07:20 IST" duration-ms="35612">
+      <class name="com.playwright.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.playwright.LoginTest@130d63be]" started-at="2025-12-20T19:06:44 IST" name="setUp" finished-at="2025-12-20T19:06:52 IST" duration-ms="7816" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="addProductToCart()[pri:0, instance:com.playwright.EcommerceTest@35e2d654]" started-at="2025-12-14T14:01:20 IST" name="addProductToCart" finished-at="2025-12-14T14:01:21 IST" duration-ms="1381" status="PASS">
+        <test-method signature="TC_LOGIN_001_ValidLogin_StandardUser()[pri:0, instance:com.playwright.LoginTest@130d63be]" started-at="2025-12-20T19:06:52 IST" name="TC_LOGIN_001_ValidLogin_StandardUser" finished-at="2025-12-20T19:06:53 IST" duration-ms="1141" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addProductToCart -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.playwright.EcommerceTest@35e2d654]" started-at="2025-12-14T14:01:21 IST" name="tearDown" finished-at="2025-12-14T14:01:21 IST" duration-ms="319" status="PASS">
+        </test-method> <!-- TC_LOGIN_001_ValidLogin_StandardUser -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.playwright.LoginTest@130d63be]" started-at="2025-12-20T19:06:53 IST" name="tearDown" finished-at="2025-12-20T19:06:53 IST" duration-ms="254" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addProductToCart status=SUCCESS method=EcommerceTest.addProductToCart()[pri:0, instance:com.playwright.EcommerceTest@35e2d654] output={null}]]]>
+                <![CDATA[[TestResult name=TC_LOGIN_001_ValidLogin_StandardUser status=SUCCESS method=LoginTest.TC_LOGIN_001_ValidLogin_StandardUser()[pri:0, instance:com.playwright.LoginTest@130d63be] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.playwright.EcommerceTest@35e2d654]" started-at="2025-12-14T14:01:21 IST" name="setUp" finished-at="2025-12-14T14:01:23 IST" duration-ms="1197" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.playwright.LoginTest@130d63be]" started-at="2025-12-20T19:06:53 IST" name="setUp" finished-at="2025-12-20T19:06:54 IST" duration-ms="961" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="removeProductFromCart()[pri:0, instance:com.playwright.EcommerceTest@35e2d654]" started-at="2025-12-14T14:01:23 IST" name="removeProductFromCart" finished-at="2025-12-14T14:01:24 IST" duration-ms="1392" status="PASS">
+        <test-method signature="TC_LOGIN_002_Invalid_Username()[pri:0, instance:com.playwright.LoginTest@130d63be]" started-at="2025-12-20T19:06:54 IST" name="TC_LOGIN_002_Invalid_Username" finished-at="2025-12-20T19:06:55 IST" duration-ms="1292" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- removeProductFromCart -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.playwright.EcommerceTest@35e2d654]" started-at="2025-12-14T14:01:24 IST" name="tearDown" finished-at="2025-12-14T14:01:24 IST" duration-ms="387" status="PASS">
+        </test-method> <!-- TC_LOGIN_002_Invalid_Username -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.playwright.LoginTest@130d63be]" started-at="2025-12-20T19:06:55 IST" name="tearDown" finished-at="2025-12-20T19:06:56 IST" duration-ms="226" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=removeProductFromCart status=SUCCESS method=EcommerceTest.removeProductFromCart()[pri:0, instance:com.playwright.EcommerceTest@35e2d654] output={null}]]]>
+                <![CDATA[[TestResult name=TC_LOGIN_002_Invalid_Username status=SUCCESS method=LoginTest.TC_LOGIN_002_Invalid_Username()[pri:0, instance:com.playwright.LoginTest@130d63be] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.playwright.EcommerceTest -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.playwright.LoginTest@130d63be]" started-at="2025-12-20T19:06:56 IST" name="setUp" finished-at="2025-12-20T19:06:57 IST" duration-ms="1093" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC_LOGIN_003_Invalid_Password()[pri:0, instance:com.playwright.LoginTest@130d63be]" started-at="2025-12-20T19:06:57 IST" name="TC_LOGIN_003_Invalid_Password" finished-at="2025-12-20T19:06:58 IST" duration-ms="1352" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_LOGIN_003_Invalid_Password -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.playwright.LoginTest@130d63be]" started-at="2025-12-20T19:06:58 IST" name="tearDown" finished-at="2025-12-20T19:06:59 IST" duration-ms="384" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_LOGIN_003_Invalid_Password status=SUCCESS method=LoginTest.TC_LOGIN_003_Invalid_Password()[pri:0, instance:com.playwright.LoginTest@130d63be] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.playwright.LoginTest@130d63be]" started-at="2025-12-20T19:06:59 IST" name="setUp" finished-at="2025-12-20T19:07:00 IST" duration-ms="1337" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC_LOGIN_004_Empty_Username()[pri:0, instance:com.playwright.LoginTest@130d63be]" started-at="2025-12-20T19:07:00 IST" name="TC_LOGIN_004_Empty_Username" finished-at="2025-12-20T19:07:01 IST" duration-ms="953" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_LOGIN_004_Empty_Username -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.playwright.LoginTest@130d63be]" started-at="2025-12-20T19:07:01 IST" name="tearDown" finished-at="2025-12-20T19:07:01 IST" duration-ms="376" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_LOGIN_004_Empty_Username status=SUCCESS method=LoginTest.TC_LOGIN_004_Empty_Username()[pri:0, instance:com.playwright.LoginTest@130d63be] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.playwright.LoginTest@130d63be]" started-at="2025-12-20T19:07:01 IST" name="setUp" finished-at="2025-12-20T19:07:04 IST" duration-ms="2547" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC_LOGIN_005_Empty_Password()[pri:0, instance:com.playwright.LoginTest@130d63be]" started-at="2025-12-20T19:07:04 IST" name="TC_LOGIN_005_Empty_Password" finished-at="2025-12-20T19:07:05 IST" duration-ms="1223" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_LOGIN_005_Empty_Password -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.playwright.LoginTest@130d63be]" started-at="2025-12-20T19:07:05 IST" name="tearDown" finished-at="2025-12-20T19:07:05 IST" duration-ms="329" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_LOGIN_005_Empty_Password status=SUCCESS method=LoginTest.TC_LOGIN_005_Empty_Password()[pri:0, instance:com.playwright.LoginTest@130d63be] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.playwright.LoginTest@130d63be]" started-at="2025-12-20T19:07:05 IST" name="setUp" finished-at="2025-12-20T19:07:07 IST" duration-ms="1981" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC_LOGIN_006_Locked_Out_User()[pri:0, instance:com.playwright.LoginTest@130d63be]" started-at="2025-12-20T19:07:07 IST" name="TC_LOGIN_006_Locked_Out_User" finished-at="2025-12-20T19:07:08 IST" duration-ms="1089" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_LOGIN_006_Locked_Out_User -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.playwright.LoginTest@130d63be]" started-at="2025-12-20T19:07:08 IST" name="tearDown" finished-at="2025-12-20T19:07:09 IST" duration-ms="286" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_LOGIN_006_Locked_Out_User status=SUCCESS method=LoginTest.TC_LOGIN_006_Locked_Out_User()[pri:0, instance:com.playwright.LoginTest@130d63be] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.playwright.LoginTest@130d63be]" started-at="2025-12-20T19:07:09 IST" name="setUp" finished-at="2025-12-20T19:07:10 IST" duration-ms="1527" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC_LOGIN_007_Problem_User_Login()[pri:0, instance:com.playwright.LoginTest@130d63be]" started-at="2025-12-20T19:07:10 IST" name="TC_LOGIN_007_Problem_User_Login" finished-at="2025-12-20T19:07:12 IST" duration-ms="1571" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_LOGIN_007_Problem_User_Login -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.playwright.LoginTest@130d63be]" started-at="2025-12-20T19:07:12 IST" name="tearDown" finished-at="2025-12-20T19:07:12 IST" duration-ms="310" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_LOGIN_007_Problem_User_Login status=SUCCESS method=LoginTest.TC_LOGIN_007_Problem_User_Login()[pri:0, instance:com.playwright.LoginTest@130d63be] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.playwright.LoginTest@130d63be]" started-at="2025-12-20T19:07:12 IST" name="setUp" finished-at="2025-12-20T19:07:13 IST" duration-ms="1202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC_LOGIN_008_Performance_Glitch_User()[pri:0, instance:com.playwright.LoginTest@130d63be]" started-at="2025-12-20T19:07:13 IST" name="TC_LOGIN_008_Performance_Glitch_User" finished-at="2025-12-20T19:07:19 IST" duration-ms="5934" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_LOGIN_008_Performance_Glitch_User -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.playwright.LoginTest@130d63be]" started-at="2025-12-20T19:07:19 IST" name="tearDown" finished-at="2025-12-20T19:07:20 IST" duration-ms="325" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_LOGIN_008_Performance_Glitch_User status=SUCCESS method=LoginTest.TC_LOGIN_008_Performance_Glitch_User()[pri:0, instance:com.playwright.LoginTest@130d63be] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.playwright.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

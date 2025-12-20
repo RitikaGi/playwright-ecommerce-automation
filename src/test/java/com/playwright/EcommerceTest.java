@@ -7,7 +7,7 @@ public class EcommerceTest extends BaseTest{
 	
 	@Test 
 	public void addProductToCart() {
-		login();
+	//	login();
 		Assert.assertTrue(page.url().contains("/inventory.html"));
 		inventoryPage.addOnesieToCart();
 		Assert.assertTrue(inventoryPage.isCartBadgeVisible());
@@ -22,7 +22,7 @@ public class EcommerceTest extends BaseTest{
 	
 	@Test 
 	public void removeProductFromCart()  {
-		login();
+	//	login();
 		//add Product to cart
 		inventoryPage.addOnesieToCart();
 		inventoryPage.clickCartIcon();
