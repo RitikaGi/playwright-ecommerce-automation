@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.playwright.LoginTest">
+      <class name="tests.ProductCatalog">
         <methods>
+          <include name="TC_PRODUCT_010_Add_from_Product_Detail_Page"/>
+          <include name="TC_PRODUCT_009_Add_Multiple_Products"/>
+          <include name="TC_PRODUCT_008_Add_to_Cart_from_Listing_Page"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="TC_LOGIN_007_Problem_User_Login"/>
         </methods>
-      </class> <!-- com.playwright.LoginTest -->
+      </class> <!-- tests.ProductCatalog -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

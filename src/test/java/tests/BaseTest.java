@@ -16,8 +16,10 @@ import com.microsoft.playwright.Playwright;
 import com.microsoft.playwright.Tracing;
 
 import pages.CartPage;
+import pages.HeaderPage;
 import pages.InventoryPage;
 import pages.LoginPage;
+import pages.ProductPage;
 import utils.ConfigReader;
 
 public class BaseTest {
@@ -26,12 +28,13 @@ public class BaseTest {
 	private Browser browser;
 	private BrowserContext context;
 	protected Page page;
-	
+	protected ProductPage productPage;
 	protected LoginPage loginPage;
 	protected InventoryPage inventoryPage;
 	protected CartPage cartPage;
 	protected static final String BASE_URL = "https://www.saucedemo.com/";
-	
+	protected boolean skipLogin = false;
+	protected HeaderPage headerPage;
 	
 		@BeforeMethod
 		public void setUp() {
@@ -55,15 +58,17 @@ public class BaseTest {
 			loginPage = new LoginPage(page);
 			inventoryPage= new InventoryPage(page);
 			cartPage = new CartPage(page);
+			productPage = new ProductPage(page);
+			headerPage = new HeaderPage(page);
+			
+			if(!skipLogin) {
+				performLogin();
+			}
 		}	
 		
-//		protected void login() {
-//			String url = ConfigReader.getProperty("baseUrl");
-//	        String username = ConfigReader.getProperty("username");
-//	        String password = ConfigReader.getProperty("password");
-//			//Login
-//			loginPage.login(url, username, password);
-//		}
+		protected void performLogin() {
+	        loginPage.login(BASE_URL, "standard_user", "secret_sauce");
+	    }
 		
 		
 		@AfterMethod

@@ -3,12 +3,16 @@ package tests;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
- 
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 
 public class LoginTest extends BaseTest{
-	   
+	  @BeforeMethod
+	  public void disableAutoLogin() {
+		  skipLogin = true;
+	  }
+	
 	 @Test    
 	 //TC_LOGIN_001: Valid Login - Standard User
 	 public void TC_LOGIN_001_ValidLogin_StandardUser() {
