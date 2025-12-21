@@ -35,15 +35,17 @@ public class BaseTest {
 	protected static final String BASE_URL = "https://www.saucedemo.com/";
 	protected boolean skipLogin = false;
 	protected HeaderPage headerPage;
+	// Check if running in CI environment
+    boolean isCI = System.getenv("CI") != null;
 	
 		@BeforeMethod
 		public void setUp() {
 			playwright = Playwright.create();
 			try {
-				browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(false));
+				browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(isCI));
 			}
 			catch(Exception e) {
-				browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+				browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(isCI));
 			}
 			
 			context = browser.newContext();
