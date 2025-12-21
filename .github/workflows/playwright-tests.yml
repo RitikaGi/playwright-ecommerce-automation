@@ -17,32 +17,30 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         
-      - name: Setup JDK 17
+      - name: Setup JDK 11
         uses: actions/setup-java@v4
         with:
-          java-version: '17'
+          java-version: '11'
           distribution: 'temurin'
           cache: 'maven'
           
-      - name: Install Playwright dependencies
+      - name: Install Maven dependencies
+        run: mvn clean install -DskipTests
+          
+      - name: Install Playwright browsers
         run: |
-          mvn clean install -DskipTests
-          mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
+          mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps chromium"
           
       - name: Run Playwright tests
         run: mvn clean test
         continue-on-error: true
-        
-      - name: Generate Allure Report
-        if: always()
-        run: mvn allure:report
-        
-      - name: Upload Allure Report
+          
+      - name: Upload TestNG Reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: allure-report
-          path: target/site/allure-maven-plugin
+          name: testng-reports
+          path: test-output/
           retention-days: 30
           
       - name: Upload Screenshots
@@ -53,10 +51,10 @@ jobs:
           path: screenshots/
           retention-days: 7
           
-      - name: Upload TestNG Reports
+      - name: Test Summary
         if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: testng-reports
-          path: test-output/
-          retention-days: 30
+        run: |
+          echo "## Test Execution Complete" >> $GITHUB_STEP_SUMMARY
+          echo "- **Framework:** Playwright + TestNG" >> $GITHUB_STEP_SUMMARY
+          echo "- **Browser:** Chromium" >> $GITHUB_STEP_SUMMARY
+          echo "Download TestNG reports from artifacts to view results" >> $GITHUB_STEP_SUMMARY
