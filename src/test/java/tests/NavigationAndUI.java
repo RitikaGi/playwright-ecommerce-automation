@@ -1,4 +1,4 @@
-package com.playwright;
+package tests;
 
 public class NavigationAndUI {
       //TC_NAV_001: Hamburger Menu - All Options

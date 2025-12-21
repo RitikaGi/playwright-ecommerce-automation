@@ -1,4 +1,4 @@
-package com.playwright;
+package tests;
 
 import java.io.File;
 import java.nio.file.Paths;

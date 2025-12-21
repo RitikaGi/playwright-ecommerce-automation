@@ -1,4 +1,4 @@
-package com.playwright;
+package tests;
 import org.testng.Assert;
 import org.testng.annotations.*;
 

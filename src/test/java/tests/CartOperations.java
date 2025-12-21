@@ -1,4 +1,4 @@
-package com.playwright;
+package tests;
 
 public class CartOperations {
      //TC_CART_001: View Cart with Single Item

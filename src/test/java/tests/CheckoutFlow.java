@@ -1,4 +1,4 @@
-package com.playwright;
+package tests;
 
 public class CheckoutFlow {
 
