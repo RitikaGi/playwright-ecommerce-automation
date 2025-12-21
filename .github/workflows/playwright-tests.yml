@@ -28,8 +28,7 @@ jobs:
         run: mvn clean install -DskipTests
           
       - name: Install Playwright browsers
-        run: |
-          mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps chromium"
+        run: mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install chromium"
           
       - name: Run Playwright tests
         run: mvn clean test
