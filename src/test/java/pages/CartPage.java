@@ -14,7 +14,14 @@ public class CartPage {
     public CartPage(Page page) {
     	this.page=page;
     }
-     
+    
+    public void continueShopping() {
+    	page.locator("#continue-shopping").click();
+    }
+    
+    public void clickOnCheckoutButton() {
+    	page.locator("#checkout").click();
+    }
     
     // For getting details of a SPECIFIC product in cart (by product name)
     public Map<String, String> getProductDetailsFromCart(String productName) {
@@ -46,5 +53,8 @@ public class CartPage {
     	productContainer.locator("button").click();
     }
     
+    public int getCartItemCount() {
+    	return page.locator(".cart_item").count();
+    }
     
 }

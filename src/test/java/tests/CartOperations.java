@@ -60,43 +60,73 @@ public class CartOperations extends BaseTest{
 	 }
 	
 	 
-
+	 @Test
+	//TC_CART_004: Remove All Items
+	public void TC_CART_004_Remove_All_Items() {
+		 String[] products = {"Sauce Labs Onesie", "Sauce Labs Bike Light"};
+		 for(String product: products) {
+			 inventoryPage.addToCartByProductName(product);
+		 }
+		 Assert.assertEquals(headerPage.getCartBadgeCount(), "2");
+		 headerPage.clickCartIcon();
+		 Assert.assertEquals(2,cartPage.getCartItemCount());
+		 for(String product: products) {
+			 cartPage.removeItemFromCart(product);
+		 }
+		 Assert.assertFalse(headerPage.isCartBadgeVisible());
+		 Assert.assertTrue(cartPage.getCartItemCount()<1);
+	 }
 	 
-//	 @Test
-//	//TC_CART_004: Remove All Items
-//	public void TC_CART_004_Remove_All_Items() {
-//		 
-//	 }
-//	 
-//	 @Test
-//	//TC_CART_005: Continue Shopping from Cart
-//	 public void TC_CART_005_Continue_Shopping_from_Cart() {
-//		 
-//	 }
-//	
-//	 
-//	 @Test
-//	//TC_CART_006: View Empty Cart
-//	public void TC_CART_006_View_Empty_Cart() {
-//		 
-//	 }
-//	 
-//	 @Test
-//	//TC_CART_007: Cart Persistence Across Pages
-//	public void TC_CART_007_Cart_Persistence_Across_Pages() {
-//		 
-//	 }
-//	 
-//	 @Test
-//	//TC_CART_008: Proceed to Checkout from Cart
-//	public void TC_CART_008_Proceed_to_Checkout_from_Cart() {
-//		 
-//	 }
-//	 
-//	 @Test
-//	//TC_CART_009: Cart Badge Accuracy
-//	public void TC_CART_009_Cart_Badge_Accuracy() {
-//		 
-//	 }
+	 @Test
+	//TC_CART_005: Continue Shopping from Cart
+	 public void TC_CART_005_Continue_Shopping_from_Cart() {
+		 inventoryPage.addToCartByProductName("Sauce Labs Onesie");
+		 headerPage.clickCartIcon();
+		 cartPage.continueShopping();
+		 Assert.assertEquals(headerPage.getCartBadgeCount(), "1");
+	 }
+	
+	 
+ 	 @Test
+	//TC_CART_006: View Empty Cart
+	public void TC_CART_006_View_Empty_Cart() {
+		 headerPage.clickCartIcon();
+	    Assert.assertTrue(cartPage.getCartItemCount()<1);
+	 }
+	 
+	 @Test
+	//TC_CART_007: Cart Persistence Across Pages
+	public void TC_CART_007_Cart_Persistence_Across_Pages() {
+		 String[] products = {"Sauce Labs Onesie", "Sauce Labs Bike Light"};
+		 for(String product: products) {
+			 inventoryPage.addToCartByProductName(product);
+		 }
+		 Assert.assertEquals(headerPage.getCartBadgeCount(), "2");
+		 headerPage.clickCartIcon();
+		 cartPage.continueShopping();
+		 Assert.assertEquals(headerPage.getCartBadgeCount(), "2");
+	 }
+	 
+	 @Test
+	//TC_CART_008: Proceed to Checkout from Cart
+	public void TC_CART_008_Proceed_to_Checkout_from_Cart() { //Bug Checkout is available without any product in cart
+		 inventoryPage.addToCartByProductName("Sauce Labs Onesie");
+		 headerPage.clickCartIcon();
+		 cartPage.clickOnCheckoutButton();
+		 Assert.assertTrue(page.url().contains("checkout-step-one"));
+	 }
+	 
+	 @Test
+	//TC_CART_009: Cart Badge Accuracy
+	public void TC_CART_009_Cart_Badge_Accuracy() {
+		 inventoryPage.addToCartByProductName("Sauce Labs Onesie");
+		 Assert.assertEquals(headerPage.getCartBadgeCount(), "1");
+		 inventoryPage.addToCartByProductName("Sauce Labs Bike Light");
+		 Assert.assertEquals(headerPage.getCartBadgeCount(), "2");
+		 headerPage.clickCartIcon();
+		 cartPage.removeItemFromCart("Sauce Labs Onesie");
+		 Assert.assertEquals(headerPage.getCartBadgeCount(), "1");
+		 
+	 }
 	
 }

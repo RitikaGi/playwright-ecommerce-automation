@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.CartOperations">
         <methods>
-          <include name="TC_CART_002_View_Cart_with_Multiple_Items"/>
+          <include name="TC_CART_009_Cart_Badge_Accuracy"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
