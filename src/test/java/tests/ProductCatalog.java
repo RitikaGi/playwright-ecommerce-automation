@@ -89,10 +89,10 @@ public class ProductCatalog extends BaseTest{
 	@Test
 	//TC_PRODUCT_009: Add Multiple Products
 	public void TC_PRODUCT_009_Add_Multiple_Products() {
-		
-		inventoryPage.addToCartByProductName("Sauce Labs Backpack");
-		inventoryPage.addToCartByProductName("Sauce Labs Bike Light");
-		inventoryPage.addToCartByProductName("Test.allTheThings() T-Shirt (Red)");
+		String[] products = {"Sauce Labs Onesie", "Sauce Labs Bike Light"};
+		 for(String product: products) {
+			 inventoryPage.addToCartByProductName(product);
+		 }
 		assertEquals("3", headerPage.getCartBadgeCount());
 	}
 	

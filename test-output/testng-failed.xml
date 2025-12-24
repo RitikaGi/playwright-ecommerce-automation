@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.ProductCatalog">
+      <class name="tests.CartOperations">
         <methods>
-          <include name="TC_PRODUCT_010_Add_from_Product_Detail_Page"/>
-          <include name="TC_PRODUCT_009_Add_Multiple_Products"/>
-          <include name="TC_PRODUCT_008_Add_to_Cart_from_Listing_Page"/>
+          <include name="TC_CART_002_View_Cart_with_Multiple_Items"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- tests.ProductCatalog -->
+      </class> <!-- tests.CartOperations -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
