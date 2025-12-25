@@ -57,7 +57,6 @@ public class ProductCatalog extends BaseTest{
 	//TC_PRODUCT_006: Verify Product Details
 	public void TC_PRODUCT_006_Verify_Product_Details() {
 		
-		
 		Map<String,String> listDetails = inventoryPage.getProductDetailsFromList("Sauce Labs Backpack");
 		inventoryPage.clickOnItem("Sauce Labs Backpack");
 		Map<String,String> pageDetails = productPage.getProductDetailsFromPage();

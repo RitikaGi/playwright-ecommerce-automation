@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.CartOperations">
+      <class name="tests.CheckoutFlow">
         <methods>
-          <include name="TC_CART_009_Cart_Badge_Accuracy"/>
+          <include name="TC_CHECKOUT_015_End_to_End_Happy_Path"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- tests.CartOperations -->
+      </class> <!-- tests.CheckoutFlow -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

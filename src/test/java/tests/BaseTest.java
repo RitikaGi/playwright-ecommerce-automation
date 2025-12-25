@@ -16,6 +16,7 @@ import com.microsoft.playwright.Playwright;
 import com.microsoft.playwright.Tracing;
 
 import pages.CartPage;
+import pages.CheckoutPage;
 import pages.HeaderPage;
 import pages.InventoryPage;
 import pages.LoginPage;
@@ -35,6 +36,8 @@ public class BaseTest {
 	protected static final String BASE_URL = "https://www.saucedemo.com/";
 	protected boolean skipLogin = false;
 	protected HeaderPage headerPage;
+	protected CheckoutPage checkoutPage;
+	
 	// Check if running in CI environment
     boolean isCI = System.getenv("CI") != null;
 	
@@ -62,6 +65,7 @@ public class BaseTest {
 			cartPage = new CartPage(page);
 			productPage = new ProductPage(page);
 			headerPage = new HeaderPage(page);
+			checkoutPage = new CheckoutPage(page);
 			
 			if(!skipLogin) {
 				performLogin();
