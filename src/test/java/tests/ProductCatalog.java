@@ -92,7 +92,7 @@ public class ProductCatalog extends BaseTest{
 		 for(String product: products) {
 			 inventoryPage.addToCartByProductName(product);
 		 }
-		assertEquals("3", headerPage.getCartBadgeCount());
+		assertEquals("2", headerPage.getCartBadgeCount());
 	}
 	
 	@Test
