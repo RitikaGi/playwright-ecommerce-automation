@@ -12,6 +12,8 @@
             
             <!-- Checkout Flow Tests (16 tests) -->
             <class name="tests.CheckoutFlow"/>
+            <!--Navigation and UI Tests(8 tests)-->
+            <class name="tests.NavigationAndUI"/>
         </classes>
     </test>
     
