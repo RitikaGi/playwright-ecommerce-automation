@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>24/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Dec 25 22:43:38 IST 2025</td>
+<td>Started on:</td><td>Sat Dec 27 12:34:13 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>91 seconds (91196 ms)</td>
+<tr><td>Total time:</td><td>11 seconds (11401 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,125 +76,75 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.CheckoutFlow.TC_CHECKOUT_016_Postal_Code_Format_Validation()'><b>TC_CHECKOUT_016_Postal_Code_Format_Validation</b><br>Test class: tests.CheckoutFlow<br>Parameters: Special chars, 12-10</td>
-<td></td>
+<td title='tests.NavigationAndUI.TC_NAV_003_Reset_App_State_From_Cart()'><b>TC_NAV_003_Reset_App_State_From_Cart</b><br>Test class: tests.NavigationAndUI</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at tests.NavigationAndUI.TC_NAV_003_Reset_App_State_From_Cart(NavigationAndUI.java:85)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1394940518", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1394940518'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at tests.NavigationAndUI.TC_NAV_003_Reset_App_State_From_Cart(NavigationAndUI.java:85)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
 <td>0</td>
-<td>tests.CheckoutFlow@1aafa419</td></tr>
-<tr>
-<td title='tests.CheckoutFlow.TC_CHECKOUT_010_Cancel_from_Overview_Page()'><b>TC_CHECKOUT_010_Cancel_from_Overview_Page</b><br>Test class: tests.CheckoutFlow</td>
-<td></td>
-<td>0</td>
-<td>tests.CheckoutFlow@1aafa419</td></tr>
-<tr>
-<td title='tests.CheckoutFlow.TC_CHECKOUT_016_Postal_Code_Format_Validation()'><b>TC_CHECKOUT_016_Postal_Code_Format_Validation</b><br>Test class: tests.CheckoutFlow<br>Parameters: Alphanumeric, A1B2C3</td>
-<td></td>
-<td>0</td>
-<td>tests.CheckoutFlow@1aafa419</td></tr>
-<tr>
-<td title='tests.CheckoutFlow.TC_CHECKOUT_016_Postal_Code_Format_Validation()'><b>TC_CHECKOUT_016_Postal_Code_Format_Validation</b><br>Test class: tests.CheckoutFlow<br>Parameters: Single digit, 1</td>
-<td></td>
-<td>0</td>
-<td>tests.CheckoutFlow@1aafa419</td></tr>
-<tr>
-<td title='tests.CheckoutFlow.TC_CHECKOUT_013_Return_Home_After_Purchase()'><b>TC_CHECKOUT_013_Return_Home_After_Purchase</b><br>Test class: tests.CheckoutFlow</td>
-<td></td>
-<td>0</td>
-<td>tests.CheckoutFlow@1aafa419</td></tr>
-<tr>
-<td title='tests.CheckoutFlow.TC_CHECKOUT_016_Postal_Code_Format_Validation()'><b>TC_CHECKOUT_016_Postal_Code_Format_Validation</b><br>Test class: tests.CheckoutFlow<br>Parameters: Only letters, ABCDEF</td>
-<td></td>
-<td>0</td>
-<td>tests.CheckoutFlow@1aafa419</td></tr>
-<tr>
-<td title='tests.CheckoutFlow.TC_CHECKOUT_003_Checkout_Empty_Last_Name()'><b>TC_CHECKOUT_003_Checkout_Empty_Last_Name</b><br>Test class: tests.CheckoutFlow</td>
-<td></td>
-<td>0</td>
-<td>tests.CheckoutFlow@1aafa419</td></tr>
-<tr>
-<td title='tests.CheckoutFlow.TC_CHECKOUT_014_Cart_Clears_After_Purchase()'><b>TC_CHECKOUT_014_Cart_Clears_After_Purchase</b><br>Test class: tests.CheckoutFlow</td>
-<td></td>
-<td>0</td>
-<td>tests.CheckoutFlow@1aafa419</td></tr>
-<tr>
-<td title='tests.CheckoutFlow.TC_CHECKOUT_012_Verify_Order_Confirmation_Message()'><b>TC_CHECKOUT_012_Verify_Order_Confirmation_Message</b><br>Test class: tests.CheckoutFlow</td>
-<td></td>
-<td>0</td>
-<td>tests.CheckoutFlow@1aafa419</td></tr>
-<tr>
-<td title='tests.CheckoutFlow.TC_CHECKOUT_005_Checkout_All_Fields_Empty()'><b>TC_CHECKOUT_005_Checkout_All_Fields_Empty</b><br>Test class: tests.CheckoutFlow</td>
-<td></td>
-<td>0</td>
-<td>tests.CheckoutFlow@1aafa419</td></tr>
-<tr>
-<td title='tests.CheckoutFlow.TC_CHECKOUT_016_Postal_Code_Format_Validation()'><b>TC_CHECKOUT_016_Postal_Code_Format_Validation</b><br>Test class: tests.CheckoutFlow<br>Parameters: Numeric, 121003</td>
-<td></td>
-<td>0</td>
-<td>tests.CheckoutFlow@1aafa419</td></tr>
-<tr>
-<td title='tests.CheckoutFlow.TC_CHECKOUT_016_Postal_Code_Format_Validation()'><b>TC_CHECKOUT_016_Postal_Code_Format_Validation</b><br>Test class: tests.CheckoutFlow<br>Parameters: Empty with spaces,    </td>
-<td></td>
-<td>0</td>
-<td>tests.CheckoutFlow@1aafa419</td></tr>
-<tr>
-<td title='tests.CheckoutFlow.TC_CHECKOUT_002_Checkout_Empty_First_Name()'><b>TC_CHECKOUT_002_Checkout_Empty_First_Name</b><br>Test class: tests.CheckoutFlow</td>
-<td></td>
-<td>0</td>
-<td>tests.CheckoutFlow@1aafa419</td></tr>
-<tr>
-<td title='tests.CheckoutFlow.TC_CHECKOUT_016_Postal_Code_Format_Validation()'><b>TC_CHECKOUT_016_Postal_Code_Format_Validation</b><br>Test class: tests.CheckoutFlow<br>Parameters: With spaces, 12 10 03</td>
-<td></td>
-<td>0</td>
-<td>tests.CheckoutFlow@1aafa419</td></tr>
-<tr>
-<td title='tests.CheckoutFlow.TC_CHECKOUT_008_Verify_Multiple_Items_in_Overview()'><b>TC_CHECKOUT_008_Verify_Multiple_Items_in_Overview</b><br>Test class: tests.CheckoutFlow</td>
-<td></td>
-<td>1</td>
-<td>tests.CheckoutFlow@1aafa419</td></tr>
-<tr>
-<td title='tests.CheckoutFlow.TC_CHECKOUT_006_Cancel_from_Checkout_Step_One()'><b>TC_CHECKOUT_006_Cancel_from_Checkout_Step_One</b><br>Test class: tests.CheckoutFlow</td>
-<td></td>
-<td>0</td>
-<td>tests.CheckoutFlow@1aafa419</td></tr>
-<tr>
-<td title='tests.CheckoutFlow.TC_CHECKOUT_016_Postal_Code_Format_Validation()'><b>TC_CHECKOUT_016_Postal_Code_Format_Validation</b><br>Test class: tests.CheckoutFlow<br>Parameters: Long format, 123456789</td>
-<td></td>
-<td>0</td>
-<td>tests.CheckoutFlow@1aafa419</td></tr>
-<tr>
-<td title='tests.CheckoutFlow.TC_CHECKOUT_001_Checkout_Step_One_Valid_Info()'><b>TC_CHECKOUT_001_Checkout_Step_One_Valid_Info</b><br>Test class: tests.CheckoutFlow</td>
-<td></td>
-<td>0</td>
-<td>tests.CheckoutFlow@1aafa419</td></tr>
-<tr>
-<td title='tests.CheckoutFlow.TC_CHECKOUT_004_Checkout_Empty_Postal_Code()'><b>TC_CHECKOUT_004_Checkout_Empty_Postal_Code</b><br>Test class: tests.CheckoutFlow</td>
-<td></td>
-<td>0</td>
-<td>tests.CheckoutFlow@1aafa419</td></tr>
-<tr>
-<td title='tests.CheckoutFlow.TC_CHECKOUT_015_End_to_End_Happy_Path()'><b>TC_CHECKOUT_015_End_to_End_Happy_Path</b><br>Test class: tests.CheckoutFlow</td>
-<td></td>
-<td>0</td>
-<td>tests.CheckoutFlow@1aafa419</td></tr>
-<tr>
-<td title='tests.CheckoutFlow.TC_CHECKOUT_007_Verify_Checkout_Overview_Details()'><b>TC_CHECKOUT_007_Verify_Checkout_Overview_Details</b><br>Test class: tests.CheckoutFlow</td>
-<td></td>
-<td>0</td>
-<td>tests.CheckoutFlow@1aafa419</td></tr>
-<tr>
-<td title='tests.CheckoutFlow.TC_CHECKOUT_009_Verify_Tax_Calculation()'><b>TC_CHECKOUT_009_Verify_Tax_Calculation</b><br>Test class: tests.CheckoutFlow</td>
-<td></td>
-<td>0</td>
-<td>tests.CheckoutFlow@1aafa419</td></tr>
-<tr>
-<td title='tests.CheckoutFlow.TC_CHECKOUT_011_Complete_Purchase()'><b>TC_CHECKOUT_011_Complete_Purchase</b><br>Test class: tests.CheckoutFlow</td>
-<td></td>
-<td>0</td>
-<td>tests.CheckoutFlow@1aafa419</td></tr>
-<tr>
-<td title='tests.CheckoutFlow.TC_CHECKOUT_016_Postal_Code_Format_Validation()'><b>TC_CHECKOUT_016_Postal_Code_Format_Validation</b><br>Test class: tests.CheckoutFlow<br>Parameters: Mixed case, a1B2c3</td>
-<td></td>
-<td>0</td>
-<td>tests.CheckoutFlow@1aafa419</td></tr>
+<td>tests.NavigationAndUI@7d8995e</td></tr>
 </table><p>
 </body>
 </html>

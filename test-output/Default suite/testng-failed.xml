@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.CheckoutFlow">
+      <class name="tests.NavigationAndUI">
         <methods>
-          <include name="TC_CHECKOUT_015_End_to_End_Happy_Path"/>
+          <include name="TC_NAV_003_Reset_App_State_From_Cart"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- tests.CheckoutFlow -->
+      </class> <!-- tests.NavigationAndUI -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

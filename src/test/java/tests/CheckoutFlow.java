@@ -8,7 +8,6 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 
-
 public class CheckoutFlow extends BaseTest{
 	
     @Test
@@ -204,7 +203,6 @@ public class CheckoutFlow extends BaseTest{
     	Assert.assertEquals(cartPage.getCartItemCount(),1);
     		
 	}
-	
 	
 	@Test
 	//TC_CHECKOUT_014: Cart Clears After Purchase

@@ -32,7 +32,7 @@ jobs:
           
       - name: Run Playwright tests
         run: mvn clean test
-        continue-on-error: true
+        
           
       - name: Upload TestNG Reports
         if: always()

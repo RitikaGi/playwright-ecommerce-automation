@@ -17,9 +17,11 @@ import com.microsoft.playwright.Tracing;
 
 import pages.CartPage;
 import pages.CheckoutPage;
+import pages.FooterPage;
 import pages.HeaderPage;
 import pages.InventoryPage;
 import pages.LoginPage;
+import pages.NavigationPage;
 import pages.ProductPage;
 import utils.ConfigReader;
 
@@ -37,6 +39,8 @@ public class BaseTest {
 	protected boolean skipLogin = false;
 	protected HeaderPage headerPage;
 	protected CheckoutPage checkoutPage;
+	protected NavigationPage navigationPage;
+	protected FooterPage footerPage;
 	
 	// Check if running in CI environment
     boolean isCI = System.getenv("CI") != null;
@@ -66,6 +70,8 @@ public class BaseTest {
 			productPage = new ProductPage(page);
 			headerPage = new HeaderPage(page);
 			checkoutPage = new CheckoutPage(page);
+			navigationPage = new NavigationPage(page);
+			footerPage = new FooterPage(page);
 			
 			if(!skipLogin) {
 				performLogin();

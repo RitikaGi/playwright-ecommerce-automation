@@ -1,12 +1,21 @@
 package pages;
 
+import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 
 public class LoginPage {
 	private Page page;
+	private Locator usernameField;
+	private Locator passwordField;
+	private Locator loginButton;
+	private Locator errorMessageOnLogin;
 
 	public LoginPage(Page page){
 		this.page = page;
+		this.usernameField = page.locator("#user-name");
+		this.passwordField = page.locator("#password");
+		this.loginButton = page.locator(".submit-button");
+		this.errorMessageOnLogin = page.locator("[data-test='error']");
 	}
 	
 	public void navigateToUrl(String url) {
@@ -14,23 +23,31 @@ public class LoginPage {
 	}
 	
 	public void enterUsername(String username) {
-		page.locator("#user-name").fill(username);
+		usernameField.fill(username);
 	}
 	
 	public void enterPassword(String password) {
-		page.locator("#password").fill(password);
+		passwordField.fill(password);
 	}
 	
 	public void clickLoginButton() {
-		page.locator(".submit-button").click();
+		loginButton.click();
 	}
 	
 	public String getErrorMessage() {
-		return page.locator("[data-test='error']").textContent();
+		return errorMessageOnLogin.textContent();
 	}
 	
 	public boolean isErrorMessageVisible() {
-		return page.locator("[data-test='error']").isVisible();
+		return errorMessageOnLogin.isVisible();
+	}
+	
+	public boolean isOnLoginPage() {
+		boolean urlCorrect = page.url().contains("saucedemo.com");
+		boolean elementsVisible = usernameField.isVisible()
+			                	&& passwordField.isVisible()
+			                	&& loginButton.isVisible();
+		return urlCorrect && elementsVisible;
 	}
 	
 	
