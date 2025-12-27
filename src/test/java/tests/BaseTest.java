@@ -23,7 +23,7 @@ import pages.InventoryPage;
 import pages.LoginPage;
 import pages.NavigationPage;
 import pages.ProductPage;
-import utils.ConfigReader;
+
 
 public class BaseTest {
 	
