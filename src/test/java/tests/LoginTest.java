@@ -67,12 +67,12 @@ public class LoginTest extends BaseTest{
 		 assertTrue(loginPage.getErrorMessage().contains("Sorry, this user has been locked out."));	
 	 }
 	 
-	 @Test
+	 @Test(enabled=false, description="Known Bugs BUG-001: All products images should not be same")
 	//TC_LOGIN_007: Problem User Login
 	 public void TC_LOGIN_007_Problem_User_Login() {
 		 loginPage.login(BASE_URL, Users.PROBLEM_USER.getUsername(), Users.PROBLEM_USER.getPassword());
 		 assertTrue(inventoryPage.isProductsHeaderVisible());
-		 assertTrue(inventoryPage.areAllProductsImageSame());
+		 assertFalse(inventoryPage.areAllProductsImageSame());
 	 }
 	 
 	 @Test

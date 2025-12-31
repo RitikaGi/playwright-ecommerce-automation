@@ -110,7 +110,7 @@ public class CartOperations extends BaseTest{
 	 
 	 @Test
 	//TC_CART_008: Proceed to Checkout from Cart
-	public void TC_CART_008_Proceed_to_Checkout_from_Cart() { //Bug Checkout is available without any product in cart
+	public void TC_CART_008_Proceed_to_Checkout_from_Cart_With_Item() { 
 		 inventoryPage.addToCartByProductName(Products.ONESIE.getName());
 		 headerPage.clickCartIcon();
 		 cartPage.clickOnCheckoutButton();
@@ -130,4 +130,13 @@ public class CartOperations extends BaseTest{
 		 
 	 }
 	
+	 @Test(enabled=false, description="Known Bugs BUG003: Moving to checkout with the blank cart")
+		//TC_CART_010: Proceed to Checkout from Cart Without Item
+	   
+		public void TC_CART_008_Proceed_to_Checkout_from_Cart_Without_Item() { 
+			 headerPage.clickCartIcon();
+			 cartPage.clickOnCheckoutButton();
+			 Assert.assertFalse(page.url().contains("checkout-step-one"));
+		 }
+		 
 }

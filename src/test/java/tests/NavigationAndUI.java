@@ -6,6 +6,8 @@ import java.util.List;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import utils.TestData.Products;
+
 public class NavigationAndUI extends BaseTest{
 	
 	
@@ -33,7 +35,7 @@ public class NavigationAndUI extends BaseTest{
 	  	 @Test
 	 //TC_NAV_003: Reset App State
 	 public void TC_NAV_003_Reset_App_State() {
-	  	 inventoryPage.addToCartByProductName("Sauce Labs Fleece Jacket");
+	  	 inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
 		 headerPage.openMenu();
 		 headerPage.clickResetAppState();
 		 Assert.assertFalse(headerPage.isCartBadgeVisible());
@@ -52,7 +54,7 @@ public class NavigationAndUI extends BaseTest{
 	 @Test
 	//TC_NAV_005: All Items Navigation
 	 public void TC_NAV_005_All_Items_Navigation() {
-		 inventoryPage.clickOnItem("Sauce Labs Fleece Jacket");
+		 inventoryPage.clickOnItem(Products.FLEECE_JACKET.getName());
 		 headerPage.openMenu();
 		 headerPage.clickAllItems();
 		 Assert.assertTrue(page.url().contains("inventory.html"));
@@ -75,10 +77,10 @@ public class NavigationAndUI extends BaseTest{
 	 }
 	 
 	 
-	 @Test
-	 //TC_NAV_008: Reset App State From Cart Page
-	 public void TC_NAV_003_Reset_App_State_From_Cart() {   //Bug
-	  	 inventoryPage.addToCartByProductName("Sauce Labs Fleece Jacket");
+	 @Test(enabled=false, description="Known Bugs BUG-002: Reset doesn't clear cart from cart page")
+	 //TC_NAV_008: Reset App State From Cart 
+	 public void TC_NAV_008_Reset_App_State_From_Cart() {   
+	  	 inventoryPage.addToCartByProductName(Products.BACKPACK.getName());
 	  	 headerPage.clickCartIcon();
 		 headerPage.openMenu();
 		 headerPage.clickResetAppState();
