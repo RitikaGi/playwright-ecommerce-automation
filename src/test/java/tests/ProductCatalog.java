@@ -8,6 +8,8 @@ import java.util.Map;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import utils.TestData.Products;
+
 public class ProductCatalog extends BaseTest{
 	  
 	@Test
@@ -57,8 +59,8 @@ public class ProductCatalog extends BaseTest{
 	//TC_PRODUCT_006: Verify Product Details
 	public void TC_PRODUCT_006_Verify_Product_Details() {
 		
-		Map<String,String> listDetails = inventoryPage.getProductDetailsFromList("Sauce Labs Backpack");
-		inventoryPage.clickOnItem("Sauce Labs Backpack");
+		Map<String,String> listDetails = inventoryPage.getProductDetailsFromList(Products.BACKPACK.getName());
+		inventoryPage.clickOnItem(Products.BACKPACK.getName());
 		Map<String,String> pageDetails = productPage.getProductDetailsFromPage();
 		Assert.assertEquals(pageDetails, listDetails, 
                 "Product details mismatch between list and details page"); //one line assertion
@@ -71,24 +73,26 @@ public class ProductCatalog extends BaseTest{
 	//TC_PRODUCT_007: Navigate Back from Product Details
 	public void TC_PRODUCT_007_Navigate_Back_from_Product_Details() {
 		
-		inventoryPage.clickOnItem("Sauce Labs Backpack");
+		inventoryPage.clickOnItem(Products.BACKPACK.getName());
 		productPage.navigateBackToInventory();
 		assertTrue(page.url().contains("inventory.html"));
-	}
+	} 
 	
 	@Test
 	//TC_PRODUCT_008: Add to Cart from Listing Page
 	public void TC_PRODUCT_008_Add_to_Cart_from_Listing_Page() {
 		
-		inventoryPage.addToCartByProductName("Sauce Labs Backpack");
+		inventoryPage.addToCartByProductName(Products.BACKPACK.getName());
 		assert inventoryPage.addToCartOrRemoveButton().textContent().contains("Remove");
 		assertEquals("1",headerPage.getCartBadgeCount());
 	}
 	
+	
+	
 	@Test
 	//TC_PRODUCT_009: Add Multiple Products
 	public void TC_PRODUCT_009_Add_Multiple_Products() {
-		String[] products = {"Sauce Labs Onesie", "Sauce Labs Bike Light"};
+		String[] products = {Products.BACKPACK.getName(), Products.BIKE_LIGHT.getName()};
 		 for(String product: products) {
 			 inventoryPage.addToCartByProductName(product);
 		 }
@@ -99,9 +103,11 @@ public class ProductCatalog extends BaseTest{
 	//TC_PRODUCT_010: Add from Product Detail Page
 	public void TC_PRODUCT_010_Add_from_Product_Detail_Page() {
 		
-		inventoryPage.clickOnItem("Sauce Labs Backpack");
+		inventoryPage.clickOnItem(Products.BACKPACK.getName());
 		productPage.addToCart();
 		assertEquals("1",headerPage.getCartBadgeCount());
 	}
+	
+	
 }
 

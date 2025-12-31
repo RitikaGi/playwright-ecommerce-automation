@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.NavigationAndUI">
+      <class name="tests.LoginTest">
         <methods>
-          <include name="TC_NAV_003_Reset_App_State_From_Cart"/>
+          <include name="disableAutoLogin"/>
+          <include name="TC_LOGIN_002_Invalid_Username"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- tests.NavigationAndUI -->
+      </class> <!-- tests.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

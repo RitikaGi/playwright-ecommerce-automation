@@ -7,13 +7,15 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import utils.TestData.Products;
+
 
 public class CheckoutFlow extends BaseTest{
 	
     @Test
 	//TC_CHECKOUT_001: Checkout Step One - Valid Info
     public void TC_CHECKOUT_001_Checkout_Step_One_Valid_Info() {
-    	inventoryPage.addToCartByProductName("Sauce Labs Fleece Jacket");
+    	inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
     	headerPage.clickCartIcon();
     	cartPage.clickOnCheckoutButton();
     	checkoutPage.fillCheckoutForm("kishor", "kumar", "121304");
@@ -24,7 +26,7 @@ public class CheckoutFlow extends BaseTest{
 	@Test
 	//TC_CHECKOUT_002: Checkout - Empty First Name
 	public void TC_CHECKOUT_002_Checkout_Empty_First_Name() {
-		inventoryPage.addToCartByProductName("Sauce Labs Fleece Jacket");
+		inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
     	headerPage.clickCartIcon();
     	cartPage.clickOnCheckoutButton();
     	checkoutPage.fillCheckoutForm("", "kumari", "121334");
@@ -35,7 +37,7 @@ public class CheckoutFlow extends BaseTest{
 	@Test
 	//TC_CHECKOUT_003: Checkout - Empty Last Name
 	public void TC_CHECKOUT_003_Checkout_Empty_Last_Name() {
-		inventoryPage.addToCartByProductName("Sauce Labs Fleece Jacket");
+		inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
     	headerPage.clickCartIcon();
     	cartPage.clickOnCheckoutButton();
     	checkoutPage.fillCheckoutForm("kishori", "", "121334");
@@ -46,7 +48,7 @@ public class CheckoutFlow extends BaseTest{
 	@Test
 	//TC_CHECKOUT_004: Checkout - Empty Postal Code
 	public void TC_CHECKOUT_004_Checkout_Empty_Postal_Code() {
-		inventoryPage.addToCartByProductName("Sauce Labs Fleece Jacket");
+		inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
     	headerPage.clickCartIcon();
     	cartPage.clickOnCheckoutButton();
     	checkoutPage.fillCheckoutForm("kishori", "singh", "");
@@ -57,7 +59,7 @@ public class CheckoutFlow extends BaseTest{
 	@Test
 	//TC_CHECKOUT_005: Checkout - All Fields Empty
 	public void TC_CHECKOUT_005_Checkout_All_Fields_Empty() {
-		inventoryPage.addToCartByProductName("Sauce Labs Fleece Jacket");
+		inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
     	headerPage.clickCartIcon();
     	cartPage.clickOnCheckoutButton();
     	checkoutPage.fillCheckoutForm("", "", "");
@@ -68,7 +70,7 @@ public class CheckoutFlow extends BaseTest{
 	@Test
 	//TC_CHECKOUT_006: Cancel from Checkout Step One
 	public void TC_CHECKOUT_006_Cancel_from_Checkout_Step_One() {
-		inventoryPage.addToCartByProductName("Sauce Labs Fleece Jacket");
+		inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
     	headerPage.clickCartIcon();
     	cartPage.clickOnCheckoutButton();
     	checkoutPage.clickCancel();
@@ -79,13 +81,13 @@ public class CheckoutFlow extends BaseTest{
 	@Test
 	//TC_CHECKOUT_007: Verify Checkout Overview Details
 	public void TC_CHECKOUT_007_Verify_Checkout_Overview_Details() {
-		Map<String,String> list_details= inventoryPage.getProductDetailsFromList("Sauce Labs Fleece Jacket");
-		inventoryPage.addToCartByProductName("Sauce Labs Fleece Jacket");
+		Map<String,String> list_details= inventoryPage.getProductDetailsFromList(Products.FLEECE_JACKET.getName());
+		inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
     	headerPage.clickCartIcon();
     	cartPage.clickOnCheckoutButton();
     	checkoutPage.fillCheckoutForm("kishor", "kumar", "121304");
     	checkoutPage.clickContinue();
-    	Map<String,String> checkout_details=checkoutPage.getProductDetailsFromCheckout("Sauce Labs Fleece Jacket");
+    	Map<String,String> checkout_details=checkoutPage.getProductDetailsFromCheckout(Products.FLEECE_JACKET.getName());
     	Assert.assertEquals(checkout_details, list_details );
 	}
 	
@@ -93,20 +95,20 @@ public class CheckoutFlow extends BaseTest{
 	@Test
 	//TC_CHECKOUT_008: Verify Multiple Items in Overview
 	public void TC_CHECKOUT_008_Verify_Multiple_Items_in_Overview() {
-		String[] products = {"Sauce Labs Onesie", "Sauce Labs Bike Light"};
+		Products[] products = {Products.ONESIE, Products.BIKE_LIGHT};
 		Map<String,Map<String,String>> inventoryDetails = new HashMap<>();
-		for(String product:products) {
-			Map<String,String> productDetails = inventoryPage.getProductDetailsFromList(product);
-			inventoryDetails.put(product, productDetails);
-			inventoryPage.addToCartByProductName(product);
+		for(Products product:products) {
+			Map<String,String> productDetails = inventoryPage.getProductDetailsFromList(product.getName());
+			inventoryDetails.put(product.getName(), productDetails);
+			inventoryPage.addToCartByProductName(product.getName());
 		}
 		headerPage.clickCartIcon();
 	    cartPage.clickOnCheckoutButton();
 	    checkoutPage.fillCheckoutForm("kishor", "kumar", "121304");
 	    checkoutPage.clickContinue();
-	    for(String product: products) {
-	    	Map<String,String> checkoutDetails = checkoutPage.getProductDetailsFromCheckout(product);
-	    	Map<String,String> expectedDetails = inventoryDetails.get(product);
+	    for(Products product: products) {
+	    	Map<String,String> checkoutDetails = checkoutPage.getProductDetailsFromCheckout(product.getName());
+	    	Map<String,String> expectedDetails = inventoryDetails.get(product.getName());
 	    	Assert.assertEquals(expectedDetails, checkoutDetails);
 	    	Assert.assertEquals(checkoutPage.getPaymentInfo(),"SauceCard #31337");
 	    	Assert.assertEquals(checkoutPage.getShippingAddress(), "Free Pony Express Delivery!");
@@ -125,7 +127,7 @@ public class CheckoutFlow extends BaseTest{
 	@Test
 	//TC_CHECKOUT_009: Verify Tax Calculation
 	public void TC_CHECKOUT_009_Verify_Tax_Calculation() {
-		inventoryPage.addToCartByProductName("Sauce Labs Fleece Jacket");
+		inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
     	headerPage.clickCartIcon();
     	cartPage.clickOnCheckoutButton();
     	checkoutPage.fillCheckoutForm("kishori", "kumari", "121334");
@@ -141,7 +143,7 @@ public class CheckoutFlow extends BaseTest{
 	@Test
 	//TC_CHECKOUT_010: Cancel from Overview Page
 	public void TC_CHECKOUT_010_Cancel_from_Overview_Page() {
-		inventoryPage.addToCartByProductName("Sauce Labs Fleece Jacket");
+		inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
     	headerPage.clickCartIcon();
     	cartPage.clickOnCheckoutButton();
     	checkoutPage.fillCheckoutForm("kishori", "kumari", "121334");
@@ -157,7 +159,7 @@ public class CheckoutFlow extends BaseTest{
 	@Test
 	//TC_CHECKOUT_011: Complete Purchase
 	public void TC_CHECKOUT_011_Complete_Purchase() {
-		inventoryPage.addToCartByProductName("Sauce Labs Fleece Jacket");
+		inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
     	headerPage.clickCartIcon();
     	cartPage.clickOnCheckoutButton();
     	checkoutPage.fillCheckoutForm("kishori", "kumari", "121334");
@@ -174,7 +176,7 @@ public class CheckoutFlow extends BaseTest{
 	@Test
 	//TC_CHECKOUT_012: Verify Order Confirmation Message
 	public void TC_CHECKOUT_012_Verify_Order_Confirmation_Message() {
-		inventoryPage.addToCartByProductName("Sauce Labs Fleece Jacket");
+		inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
     	headerPage.clickCartIcon();
     	cartPage.clickOnCheckoutButton();
     	checkoutPage.fillCheckoutForm("kishori", "kumari", "121334");
@@ -188,7 +190,7 @@ public class CheckoutFlow extends BaseTest{
 	@Test
 	//TC_CHECKOUT_013: Return Home After Purchase
 	public void TC_CHECKOUT_013_Return_Home_After_Purchase() {
-		inventoryPage.addToCartByProductName("Sauce Labs Fleece Jacket");
+		inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
     	headerPage.clickCartIcon();
     	cartPage.clickOnCheckoutButton();
     	checkoutPage.fillCheckoutForm("kishori", "kumari", "121334");
@@ -197,7 +199,7 @@ public class CheckoutFlow extends BaseTest{
     	checkoutPage.clickBackHomeButton();
     	Assert.assertTrue(page.url().contains("inventory"));
     	Assert.assertFalse(headerPage.isCartBadgeVisible());
-    	inventoryPage.addToCartByProductName("Sauce Labs Fleece Jacket");
+    	inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
     	headerPage.clickCartIcon();
     	Assert.assertEquals(headerPage.getCartBadgeCount(),"1","badge count is not retained");
     	Assert.assertEquals(cartPage.getCartItemCount(),1);
@@ -207,7 +209,7 @@ public class CheckoutFlow extends BaseTest{
 	@Test
 	//TC_CHECKOUT_014: Cart Clears After Purchase
 	public void TC_CHECKOUT_014_Cart_Clears_After_Purchase() {
-		inventoryPage.addToCartByProductName("Sauce Labs Fleece Jacket");
+		inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
     	headerPage.clickCartIcon();
     	cartPage.clickOnCheckoutButton();
     	checkoutPage.fillCheckoutForm("kishori", "kumari", "121334");
@@ -222,20 +224,20 @@ public class CheckoutFlow extends BaseTest{
 	@Test
 	//TC_CHECKOUT_015: End-to-End Happy Path
 	public void TC_CHECKOUT_015_End_to_End_Happy_Path() {
-		String[] products = {"Sauce Labs Onesie", "Sauce Labs Bike Light"};
+		Products[] products = {Products.ONESIE, Products.BIKE_LIGHT};
 		Map<String,Map<String,String>> inventoryDetails = new HashMap<>();
-		for(String product:products) {
-			Map<String,String> productDetails = inventoryPage.getProductDetailsFromList(product);
-			inventoryDetails.put(product, productDetails);
-			inventoryPage.addToCartByProductName(product);
+		for(Products product:products) {
+			Map<String,String> productDetails = inventoryPage.getProductDetailsFromList(product.getName());
+			inventoryDetails.put(product.getName(), productDetails);
+			inventoryPage.addToCartByProductName(product.getName());
 		}
 		headerPage.clickCartIcon();
 	    cartPage.clickOnCheckoutButton();
 	    checkoutPage.fillCheckoutForm("kishor", "kumar", "121304");
 	    checkoutPage.clickContinue();
-	    for(String product: products) {
-	    	Map<String,String> checkoutDetails = checkoutPage.getProductDetailsFromCheckout(product);
-	    	Map<String,String> expectedDetails = inventoryDetails.get(product);
+	    for(Products product: products) {
+	    	Map<String,String> checkoutDetails = checkoutPage.getProductDetailsFromCheckout(product.getName());
+	    	Map<String,String> expectedDetails = inventoryDetails.get(product.getName());
 	    	Assert.assertEquals(expectedDetails, checkoutDetails);
 	}
 	    checkoutPage.clickFinishButton();
@@ -248,7 +250,7 @@ public class CheckoutFlow extends BaseTest{
 	//TC_CHECKOUT_016: Postal Code Format Validation
 	public void TC_CHECKOUT_016_Postal_Code_Format_Validation(String format,String postalCode) {
 		// Add product and navigate to checkout
-	    inventoryPage.addToCartByProductName("Sauce Labs Backpack");
+	    inventoryPage.addToCartByProductName(Products.BACKPACK.getName());
 	    headerPage.clickCartIcon();
 	    cartPage.clickOnCheckoutButton();
 	    

@@ -23,6 +23,7 @@ import pages.InventoryPage;
 import pages.LoginPage;
 import pages.NavigationPage;
 import pages.ProductPage;
+import utils.TestData.Users;
 
 
 public class BaseTest {
@@ -79,7 +80,7 @@ public class BaseTest {
 		}	
 		
 		protected void performLogin() {
-	        loginPage.login(BASE_URL, "standard_user", "secret_sauce");
+	        loginPage.login(BASE_URL, Users.STANDARD_USER.getUsername(), Users.STANDARD_USER.getPassword());
 	    }
 		
 		

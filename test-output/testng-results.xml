@@ -1,72 +1,197 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-27T12:34:13 IST" name="Default suite" finished-at="2025-12-27T12:34:24 IST" duration-ms="11401">
+  <suite started-at="2025-12-31T15:03:07 IST" name="Default suite" finished-at="2025-12-31T15:03:36 IST" duration-ms="29446">
     <groups>
     </groups>
-    <test started-at="2025-12-27T12:34:13 IST" name="Default test" finished-at="2025-12-27T12:34:24 IST" duration-ms="11401">
-      <class name="tests.NavigationAndUI">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.NavigationAndUI@7d8995e]" started-at="2025-12-27T12:34:13 IST" name="setUp" finished-at="2025-12-27T12:34:22 IST" duration-ms="9318" status="PASS">
+    <test started-at="2025-12-31T15:03:07 IST" name="Default test" finished-at="2025-12-31T15:03:36 IST" duration-ms="29446">
+      <class name="tests.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:07 IST" name="setUp" finished-at="2025-12-31T15:03:16 IST" duration-ms="8895" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_NAV_003_Reset_App_State_From_Cart()[pri:0, instance:tests.NavigationAndUI@7d8995e]" started-at="2025-12-27T12:34:22 IST" name="TC_NAV_003_Reset_App_State_From_Cart" finished-at="2025-12-27T12:34:23 IST" duration-ms="934" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at org.testng.Assert.assertTrue(Assert.java:67)
-at tests.NavigationAndUI.TC_NAV_003_Reset_App_State_From_Cart(NavigationAndUI.java:85)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method is-config="true" signature="disableAutoLogin()[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:16 IST" name="disableAutoLogin" finished-at="2025-12-31T15:03:16 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_NAV_003_Reset_App_State_From_Cart -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.NavigationAndUI@7d8995e]" started-at="2025-12-27T12:34:23 IST" name="tearDown" finished-at="2025-12-27T12:34:24 IST" duration-ms="1112" status="PASS">
+        </test-method> <!-- disableAutoLogin -->
+        <test-method signature="TC_LOGIN_001_ValidLogin_StandardUser()[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:16 IST" name="TC_LOGIN_001_ValidLogin_StandardUser" finished-at="2025-12-31T15:03:16 IST" duration-ms="403" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_LOGIN_001_ValidLogin_StandardUser -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:16 IST" name="tearDown" finished-at="2025-12-31T15:03:16 IST" duration-ms="231" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_NAV_003_Reset_App_State_From_Cart status=FAILURE method=NavigationAndUI.TC_NAV_003_Reset_App_State_From_Cart()[pri:0, instance:tests.NavigationAndUI@7d8995e] output={null}]]]>
+                <![CDATA[[TestResult name=TC_LOGIN_001_ValidLogin_StandardUser status=SUCCESS method=LoginTest.TC_LOGIN_001_ValidLogin_StandardUser()[pri:0, instance:tests.LoginTest@3c19aaa5] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.NavigationAndUI -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:16 IST" name="setUp" finished-at="2025-12-31T15:03:17 IST" duration-ms="730" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="disableAutoLogin()[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:17 IST" name="disableAutoLogin" finished-at="2025-12-31T15:03:17 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disableAutoLogin -->
+        <test-method signature="TC_LOGIN_002_Invalid_Username()[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:17 IST" name="TC_LOGIN_002_Invalid_Username" finished-at="2025-12-31T15:03:19 IST" duration-ms="1902" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_LOGIN_002_Invalid_Username -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:19 IST" name="tearDown" finished-at="2025-12-31T15:03:19 IST" duration-ms="219" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_LOGIN_002_Invalid_Username status=SUCCESS method=LoginTest.TC_LOGIN_002_Invalid_Username()[pri:0, instance:tests.LoginTest@3c19aaa5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:19 IST" name="setUp" finished-at="2025-12-31T15:03:20 IST" duration-ms="731" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC_LOGIN_003_Invalid_Password()[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:20 IST" name="TC_LOGIN_003_Invalid_Password" finished-at="2025-12-31T15:03:21 IST" duration-ms="1099" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_LOGIN_003_Invalid_Password -->
+        <test-method is-config="true" signature="disableAutoLogin()[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:20 IST" name="disableAutoLogin" finished-at="2025-12-31T15:03:20 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disableAutoLogin -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:21 IST" name="tearDown" finished-at="2025-12-31T15:03:21 IST" duration-ms="203" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_LOGIN_003_Invalid_Password status=SUCCESS method=LoginTest.TC_LOGIN_003_Invalid_Password()[pri:0, instance:tests.LoginTest@3c19aaa5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:21 IST" name="setUp" finished-at="2025-12-31T15:03:22 IST" duration-ms="730" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="disableAutoLogin()[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:22 IST" name="disableAutoLogin" finished-at="2025-12-31T15:03:22 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disableAutoLogin -->
+        <test-method signature="TC_LOGIN_004_Empty_Username()[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:22 IST" name="TC_LOGIN_004_Empty_Username" finished-at="2025-12-31T15:03:23 IST" duration-ms="981" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_LOGIN_004_Empty_Username -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:23 IST" name="tearDown" finished-at="2025-12-31T15:03:23 IST" duration-ms="199" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_LOGIN_004_Empty_Username status=SUCCESS method=LoginTest.TC_LOGIN_004_Empty_Username()[pri:0, instance:tests.LoginTest@3c19aaa5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:23 IST" name="setUp" finished-at="2025-12-31T15:03:24 IST" duration-ms="734" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="disableAutoLogin()[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:24 IST" name="disableAutoLogin" finished-at="2025-12-31T15:03:24 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disableAutoLogin -->
+        <test-method signature="TC_LOGIN_005_Empty_Password()[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:24 IST" name="TC_LOGIN_005_Empty_Password" finished-at="2025-12-31T15:03:25 IST" duration-ms="970" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_LOGIN_005_Empty_Password -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:25 IST" name="tearDown" finished-at="2025-12-31T15:03:25 IST" duration-ms="215" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_LOGIN_005_Empty_Password status=SUCCESS method=LoginTest.TC_LOGIN_005_Empty_Password()[pri:0, instance:tests.LoginTest@3c19aaa5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:25 IST" name="setUp" finished-at="2025-12-31T15:03:26 IST" duration-ms="726" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC_LOGIN_006_Locked_Out_User()[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:26 IST" name="TC_LOGIN_006_Locked_Out_User" finished-at="2025-12-31T15:03:27 IST" duration-ms="1266" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_LOGIN_006_Locked_Out_User -->
+        <test-method is-config="true" signature="disableAutoLogin()[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:26 IST" name="disableAutoLogin" finished-at="2025-12-31T15:03:26 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disableAutoLogin -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:27 IST" name="tearDown" finished-at="2025-12-31T15:03:27 IST" duration-ms="207" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_LOGIN_006_Locked_Out_User status=SUCCESS method=LoginTest.TC_LOGIN_006_Locked_Out_User()[pri:0, instance:tests.LoginTest@3c19aaa5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:27 IST" name="setUp" finished-at="2025-12-31T15:03:28 IST" duration-ms="730" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="disableAutoLogin()[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:28 IST" name="disableAutoLogin" finished-at="2025-12-31T15:03:28 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disableAutoLogin -->
+        <test-method signature="TC_LOGIN_007_Problem_User_Login()[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:28 IST" name="TC_LOGIN_007_Problem_User_Login" finished-at="2025-12-31T15:03:29 IST" duration-ms="1051" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_LOGIN_007_Problem_User_Login -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:29 IST" name="tearDown" finished-at="2025-12-31T15:03:29 IST" duration-ms="210" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_LOGIN_007_Problem_User_Login status=SUCCESS method=LoginTest.TC_LOGIN_007_Problem_User_Login()[pri:0, instance:tests.LoginTest@3c19aaa5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:29 IST" name="setUp" finished-at="2025-12-31T15:03:30 IST" duration-ms="718" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="disableAutoLogin()[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:30 IST" name="disableAutoLogin" finished-at="2025-12-31T15:03:30 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disableAutoLogin -->
+        <test-method signature="TC_LOGIN_008_Performance_Glitch_User()[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:30 IST" name="TC_LOGIN_008_Performance_Glitch_User" finished-at="2025-12-31T15:03:36 IST" duration-ms="5982" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_LOGIN_008_Performance_Glitch_User -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@3c19aaa5]" started-at="2025-12-31T15:03:36 IST" name="tearDown" finished-at="2025-12-31T15:03:36 IST" duration-ms="243" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_LOGIN_008_Performance_Glitch_User status=SUCCESS method=LoginTest.TC_LOGIN_008_Performance_Glitch_User()[pri:0, instance:tests.LoginTest@3c19aaa5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
