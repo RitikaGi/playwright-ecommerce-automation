@@ -20,5 +20,21 @@ public class ConfigReader {
 	 public static String getProperty(String key) {
 		 return properties.getProperty(key);
 	 }
+	 
+	 public static String getProperty(String key, String defaultValue) {
+		 return properties.getProperty(key, defaultValue);
+	 }
+	 public static boolean isHeadless() {
+		String headlessConfig = getProperty("headless", "auto").toLowerCase();
+		switch(headlessConfig) {
+		case "true":
+			return true;
+		case "false":
+			return false;
+		case "auto":
+		   default:
+			return System.getenv("CI")!=null;
+		}
+	 }
 
 }

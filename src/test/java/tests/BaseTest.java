@@ -4,6 +4,8 @@ import java.io.File;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -23,7 +25,9 @@ import pages.InventoryPage;
 import pages.LoginPage;
 import pages.NavigationPage;
 import pages.ProductPage;
+import utils.TestData.Products;
 import utils.TestData.Users;
+import utils.ConfigReader;
 
 
 public class BaseTest {
@@ -36,24 +40,27 @@ public class BaseTest {
 	protected LoginPage loginPage;
 	protected InventoryPage inventoryPage;
 	protected CartPage cartPage;
-	protected static final String BASE_URL = "https://www.saucedemo.com/";
+	protected static final String BASE_URL = ConfigReader.getProperty("baseUrl");
 	protected boolean skipLogin = false;
 	protected HeaderPage headerPage;
 	protected CheckoutPage checkoutPage;
 	protected NavigationPage navigationPage;
 	protected FooterPage footerPage;
 	
-	// Check if running in CI environment
-    boolean isCI = System.getenv("CI") != null;
 	
 		@BeforeMethod
 		public void setUp() {
+			boolean headless = ConfigReader.isHeadless();
+			String browserChannel = ConfigReader.getProperty("browser");
+			
 			playwright = Playwright.create();
 			try {
-				browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(isCI));
+				browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
+						.setChannel(browserChannel).setHeadless(headless));
 			}
 			catch(Exception e) {
-				browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(isCI));
+				browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
+						.setHeadless(headless));
 			}
 			
 			context = browser.newContext();
@@ -115,7 +122,33 @@ public class BaseTest {
 			if(playwright!=null) playwright.close();
 		}
 		
+		protected void addProductsToCart(Products... products) {
+			for(Products product: products) {
+				inventoryPage.addToCartByProductName(product.getName());
+			}
+		}
 		
+		protected Map<String, Map<String,String>> addProductsToCartandDetails(Products...products){
+			Map<String, Map<String,String>> allDetails = new HashMap<>();
+			for(Products product: products) {
+				 Map<String,String> productDetails = inventoryPage.getProductDetailsFromList(product.getName());
+				 allDetails.put(product.getName(), productDetails);
+				 inventoryPage.addToCartByProductName(product.getName());
+			}
+			return allDetails;
+		}
 	
-
+       protected void navigateToCart() {
+    	   headerPage.clickCartIcon();
+       }
+       
+       protected void navigateToCheckout() {
+    	   headerPage.clickCartIcon();
+    	   cartPage.clickOnCheckoutButton();
+       }
+       
+       protected void addToCartAndNavigateToCheckout(Products...products) {
+    	   addProductsToCart(products);
+    	   navigateToCheckout();
+       }
 }

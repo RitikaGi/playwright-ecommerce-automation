@@ -73,7 +73,7 @@ public class NavigationAndUI extends BaseTest{
 	//TC_NAV_007: Copyright Text Verification
 	 public void TC_NAV_007_Copyright_Text_Verification() {
 		 Assert.assertEquals(footerPage.getCopyrightText(), 
-				 "© 2025 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy");
+				 "© 2026 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy");
 	 }
 	 
 	 
