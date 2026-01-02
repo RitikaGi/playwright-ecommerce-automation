@@ -108,12 +108,7 @@ public class CheckoutPage {
 		backToHomeButton.click();
 	}
 	
-	public void fillCheckoutForm(String firstName, String lastName, String postalCode) {
-		fillFirstName(firstName);
-		fillLastName(lastName);
-		fillPostalCode(postalCode);
-		
-	}
+	
 	
 	public int getCartItemCount() {
 		return cartItem.count();

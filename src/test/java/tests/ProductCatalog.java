@@ -59,7 +59,7 @@ public class ProductCatalog extends BaseTest{
 	//TC_PRODUCT_006: Verify Product Details
 	public void TC_PRODUCT_006_Verify_Product_Details() {
 		
-		Map<String,String> listDetails = inventoryPage.getProductDetailsFromList(Products.BACKPACK.getName());
+		Map<String,Map<String,String>> listDetails = addProductsToCartandDetails(Products.BACKPACK);
 		inventoryPage.clickOnItem(Products.BACKPACK.getName());
 		Map<String,String> pageDetails = productPage.getProductDetailsFromPage();
 		Assert.assertEquals(pageDetails, listDetails, 
@@ -92,10 +92,8 @@ public class ProductCatalog extends BaseTest{
 	@Test
 	//TC_PRODUCT_009: Add Multiple Products
 	public void TC_PRODUCT_009_Add_Multiple_Products() {
-		String[] products = {Products.BACKPACK.getName(), Products.BIKE_LIGHT.getName()};
-		 for(String product: products) {
-			 inventoryPage.addToCartByProductName(product);
-		 }
+		Products[] products = {Products.BACKPACK, Products.BIKE_LIGHT};
+		 addProductsToCart(products);
 		assertEquals("2", headerPage.getCartBadgeCount());
 	}
 	

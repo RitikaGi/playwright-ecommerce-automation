@@ -56,4 +56,37 @@
 		}
 	
 	}
+	
+	public enum CheckoutData{
+		
+		VALID_USER("kishor", "kumar", "232134"),
+	    VALID_USER_2("John", "Doe", "12345"),
+	    NO_FIRST_NAME("", "kumar", "232134"),
+	    NO_LAST_NAME("kishor", "", "232134"),
+	    NO_POSTAL_CODE("kishor", "kumar", ""),
+		INVALID_USER("","","");
+		
+		private final String firstName ;
+		private final String lastName ;
+		private final String postalCode;
+		
+		CheckoutData(String firstName, String lastName, String postalCode){
+			this.firstName= firstName;
+			this.lastName = lastName;
+			this.postalCode = postalCode;
+		}
+		
+		public String getFirstName() {
+			return firstName;
+		}
+		
+		public String getLastName() {
+			return lastName;
+		}
+		
+		public String getPostalCode() {
+			return postalCode;
+		}
+	}
+	
 	}

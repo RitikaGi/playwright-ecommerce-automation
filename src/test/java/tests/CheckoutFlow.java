@@ -7,6 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import utils.TestData.CheckoutData;
 import utils.TestData.Products;
 
 
@@ -15,64 +16,47 @@ public class CheckoutFlow extends BaseTest{
     @Test
 	//TC_CHECKOUT_001: Checkout Step One - Valid Info
     public void TC_CHECKOUT_001_Checkout_Step_One_Valid_Info() {
-    	inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
-    	headerPage.clickCartIcon();
-    	cartPage.clickOnCheckoutButton();
-    	checkoutPage.fillCheckoutForm("kishor", "kumar", "121304");
-    	checkoutPage.clickContinue();
+    	addToCartAndNavigateToCheckout(Products.FLEECE_JACKET);
+    	fillCheckoutFormAndContinue(CheckoutData.VALID_USER);
     	Assert.assertTrue(page.url().contains("checkout-step-two"));
     }
     
 	@Test
 	//TC_CHECKOUT_002: Checkout - Empty First Name
 	public void TC_CHECKOUT_002_Checkout_Empty_First_Name() {
-		inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
-    	headerPage.clickCartIcon();
-    	cartPage.clickOnCheckoutButton();
-    	checkoutPage.fillCheckoutForm("", "kumari", "121334");
-    	checkoutPage.clickContinue();
+		addToCartAndNavigateToCheckout(Products.FLEECE_JACKET);
+		fillCheckoutFormAndContinue(CheckoutData.NO_FIRST_NAME);
     	Assert.assertEquals(checkoutPage.getErrorMessage(),"Error: First Name is required");
 	}
 	
 	@Test
 	//TC_CHECKOUT_003: Checkout - Empty Last Name
 	public void TC_CHECKOUT_003_Checkout_Empty_Last_Name() {
-		inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
-    	headerPage.clickCartIcon();
-    	cartPage.clickOnCheckoutButton();
-    	checkoutPage.fillCheckoutForm("kishori", "", "121334");
-    	checkoutPage.clickContinue();
+		addToCartAndNavigateToCheckout(Products.FLEECE_JACKET);
+		fillCheckoutFormAndContinue(CheckoutData.NO_LAST_NAME);
     	Assert.assertEquals(checkoutPage.getErrorMessage(),"Error: Last Name is required");
 	}
 	
 	@Test
 	//TC_CHECKOUT_004: Checkout - Empty Postal Code
 	public void TC_CHECKOUT_004_Checkout_Empty_Postal_Code() {
-		inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
-    	headerPage.clickCartIcon();
-    	cartPage.clickOnCheckoutButton();
-    	checkoutPage.fillCheckoutForm("kishori", "singh", "");
-    	checkoutPage.clickContinue();
+		addToCartAndNavigateToCheckout(Products.FLEECE_JACKET);
+		fillCheckoutFormAndContinue(CheckoutData.NO_POSTAL_CODE);
     	Assert.assertEquals(checkoutPage.getErrorMessage(),"Error: Postal Code is required");
 	}
 	
 	@Test
 	//TC_CHECKOUT_005: Checkout - All Fields Empty
 	public void TC_CHECKOUT_005_Checkout_All_Fields_Empty() {
-		inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
-    	headerPage.clickCartIcon();
-    	cartPage.clickOnCheckoutButton();
-    	checkoutPage.fillCheckoutForm("", "", "");
-    	checkoutPage.clickContinue();
+		addToCartAndNavigateToCheckout(Products.FLEECE_JACKET);
+		fillCheckoutFormAndContinue(CheckoutData.INVALID_USER);
     	Assert.assertEquals(checkoutPage.getErrorMessage(),"Error: First Name is required");
 	}
 	
 	@Test
 	//TC_CHECKOUT_006: Cancel from Checkout Step One
 	public void TC_CHECKOUT_006_Cancel_from_Checkout_Step_One() {
-		inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
-    	headerPage.clickCartIcon();
-    	cartPage.clickOnCheckoutButton();
+		addToCartAndNavigateToCheckout(Products.FLEECE_JACKET);
     	checkoutPage.clickCancel();
     	Assert.assertEquals(headerPage.getCartBadgeCount(),"1");
     	Assert.assertEquals(cartPage.getCartItemCount(),1);
@@ -82,11 +66,8 @@ public class CheckoutFlow extends BaseTest{
 	//TC_CHECKOUT_007: Verify Checkout Overview Details
 	public void TC_CHECKOUT_007_Verify_Checkout_Overview_Details() {
 		Map<String,String> list_details= inventoryPage.getProductDetailsFromList(Products.FLEECE_JACKET.getName());
-		inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
-    	headerPage.clickCartIcon();
-    	cartPage.clickOnCheckoutButton();
-    	checkoutPage.fillCheckoutForm("kishor", "kumar", "121304");
-    	checkoutPage.clickContinue();
+		addToCartAndNavigateToCheckout(Products.FLEECE_JACKET);
+    	fillCheckoutFormAndContinue(CheckoutData.VALID_USER_2);
     	Map<String,String> checkout_details=checkoutPage.getProductDetailsFromCheckout(Products.FLEECE_JACKET.getName());
     	Assert.assertEquals(checkout_details, list_details );
 	}
@@ -96,19 +77,14 @@ public class CheckoutFlow extends BaseTest{
 	//TC_CHECKOUT_008: Verify Multiple Items in Overview
 	public void TC_CHECKOUT_008_Verify_Multiple_Items_in_Overview() {
 		Products[] products = {Products.ONESIE, Products.BIKE_LIGHT};
-		Map<String,Map<String,String>> inventoryDetails = new HashMap<>();
-		for(Products product:products) {
-			Map<String,String> productDetails = inventoryPage.getProductDetailsFromList(product.getName());
-			inventoryDetails.put(product.getName(), productDetails);
-			inventoryPage.addToCartByProductName(product.getName());
-		}
-		headerPage.clickCartIcon();
-	    cartPage.clickOnCheckoutButton();
-	    checkoutPage.fillCheckoutForm("kishor", "kumar", "121304");
-	    checkoutPage.clickContinue();
+		
+		Map<String,Map<String,String>> inventoryDetails = addProductsToCartandDetails(products);
+        navigateToCheckout();
+    	fillCheckoutFormAndContinue(CheckoutData.VALID_USER_2);
 	    for(Products product: products) {
 	    	Map<String,String> checkoutDetails = checkoutPage.getProductDetailsFromCheckout(product.getName());
 	    	Map<String,String> expectedDetails = inventoryDetails.get(product.getName());
+	    	
 	    	Assert.assertEquals(expectedDetails, checkoutDetails);
 	    	Assert.assertEquals(checkoutPage.getPaymentInfo(),"SauceCard #31337");
 	    	Assert.assertEquals(checkoutPage.getShippingAddress(), "Free Pony Express Delivery!");
@@ -127,11 +103,8 @@ public class CheckoutFlow extends BaseTest{
 	@Test
 	//TC_CHECKOUT_009: Verify Tax Calculation
 	public void TC_CHECKOUT_009_Verify_Tax_Calculation() {
-		inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
-    	headerPage.clickCartIcon();
-    	cartPage.clickOnCheckoutButton();
-    	checkoutPage.fillCheckoutForm("kishori", "kumari", "121334");
-    	checkoutPage.clickContinue();
+		addToCartAndNavigateToCheckout(Products.FLEECE_JACKET);
+    	fillCheckoutFormAndContinue(CheckoutData.VALID_USER);
     	Assert.assertEquals(checkoutPage.ActualTaxAmount(), checkoutPage.ExpectedTaxAmount(),
     			"tax amount should be 8% of item total");
     	Assert.assertEquals(checkoutPage.ActualTotalAmount(),
@@ -143,11 +116,8 @@ public class CheckoutFlow extends BaseTest{
 	@Test
 	//TC_CHECKOUT_010: Cancel from Overview Page
 	public void TC_CHECKOUT_010_Cancel_from_Overview_Page() {
-		inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
-    	headerPage.clickCartIcon();
-    	cartPage.clickOnCheckoutButton();
-    	checkoutPage.fillCheckoutForm("kishori", "kumari", "121334");
-    	checkoutPage.clickContinue();
+		addToCartAndNavigateToCheckout(Products.FLEECE_JACKET);
+    	fillCheckoutFormAndContinue(CheckoutData.VALID_USER);
     	checkoutPage.clickCancel();
     	Assert.assertEquals(headerPage.getCartBadgeCount(),"1","badge count is not retained");
     	headerPage.clickCartIcon();
@@ -159,11 +129,8 @@ public class CheckoutFlow extends BaseTest{
 	@Test
 	//TC_CHECKOUT_011: Complete Purchase
 	public void TC_CHECKOUT_011_Complete_Purchase() {
-		inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
-    	headerPage.clickCartIcon();
-    	cartPage.clickOnCheckoutButton();
-    	checkoutPage.fillCheckoutForm("kishori", "kumari", "121334");
-    	checkoutPage.clickContinue();
+		addToCartAndNavigateToCheckout(Products.FLEECE_JACKET);
+    	fillCheckoutFormAndContinue(CheckoutData.VALID_USER_2);
     	checkoutPage.clickFinishButton();
     	Assert.assertTrue(page.url().contains("checkout-complete"));
     	Assert.assertTrue(checkoutPage.isGreenCheckMarkVisible());
@@ -176,11 +143,8 @@ public class CheckoutFlow extends BaseTest{
 	@Test
 	//TC_CHECKOUT_012: Verify Order Confirmation Message
 	public void TC_CHECKOUT_012_Verify_Order_Confirmation_Message() {
-		inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
-    	headerPage.clickCartIcon();
-    	cartPage.clickOnCheckoutButton();
-    	checkoutPage.fillCheckoutForm("kishori", "kumari", "121334");
-    	checkoutPage.clickContinue();
+		addToCartAndNavigateToCheckout(Products.FLEECE_JACKET);
+    	fillCheckoutFormAndContinue(CheckoutData.VALID_USER);
     	checkoutPage.clickFinishButton();
     	Assert.assertEquals(checkoutPage.confirmationMessage(), 
     			"Your order has been dispatched, and will arrive just as fast as the pony can get there!");
@@ -190,11 +154,8 @@ public class CheckoutFlow extends BaseTest{
 	@Test
 	//TC_CHECKOUT_013: Return Home After Purchase
 	public void TC_CHECKOUT_013_Return_Home_After_Purchase() {
-		inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
-    	headerPage.clickCartIcon();
-    	cartPage.clickOnCheckoutButton();
-    	checkoutPage.fillCheckoutForm("kishori", "kumari", "121334");
-    	checkoutPage.clickContinue();
+		addToCartAndNavigateToCheckout(Products.FLEECE_JACKET);
+    	fillCheckoutFormAndContinue(CheckoutData.VALID_USER);
     	checkoutPage.clickFinishButton();
     	checkoutPage.clickBackHomeButton();
     	Assert.assertTrue(page.url().contains("inventory"));
@@ -209,11 +170,8 @@ public class CheckoutFlow extends BaseTest{
 	@Test
 	//TC_CHECKOUT_014: Cart Clears After Purchase
 	public void TC_CHECKOUT_014_Cart_Clears_After_Purchase() {
-		inventoryPage.addToCartByProductName(Products.FLEECE_JACKET.getName());
-    	headerPage.clickCartIcon();
-    	cartPage.clickOnCheckoutButton();
-    	checkoutPage.fillCheckoutForm("kishori", "kumari", "121334");
-    	checkoutPage.clickContinue();
+		addToCartAndNavigateToCheckout(Products.FLEECE_JACKET);
+    	fillCheckoutFormAndContinue(CheckoutData.VALID_USER_2);
     	checkoutPage.clickFinishButton();
     	checkoutPage.clickBackHomeButton();
     	Assert.assertFalse(headerPage.isCartBadgeVisible());
@@ -225,16 +183,9 @@ public class CheckoutFlow extends BaseTest{
 	//TC_CHECKOUT_015: End-to-End Happy Path
 	public void TC_CHECKOUT_015_End_to_End_Happy_Path() {
 		Products[] products = {Products.ONESIE, Products.BIKE_LIGHT};
-		Map<String,Map<String,String>> inventoryDetails = new HashMap<>();
-		for(Products product:products) {
-			Map<String,String> productDetails = inventoryPage.getProductDetailsFromList(product.getName());
-			inventoryDetails.put(product.getName(), productDetails);
-			inventoryPage.addToCartByProductName(product.getName());
-		}
-		headerPage.clickCartIcon();
-	    cartPage.clickOnCheckoutButton();
-	    checkoutPage.fillCheckoutForm("kishor", "kumar", "121304");
-	    checkoutPage.clickContinue();
+		Map<String,Map<String,String>> inventoryDetails = addProductsToCartandDetails(products);
+		navigateToCheckout();
+    	fillCheckoutFormAndContinue(CheckoutData.VALID_USER_2);
 	    for(Products product: products) {
 	    	Map<String,String> checkoutDetails = checkoutPage.getProductDetailsFromCheckout(product.getName());
 	    	Map<String,String> expectedDetails = inventoryDetails.get(product.getName());
@@ -250,13 +201,10 @@ public class CheckoutFlow extends BaseTest{
 	//TC_CHECKOUT_016: Postal Code Format Validation
 	public void TC_CHECKOUT_016_Postal_Code_Format_Validation(String format,String postalCode) {
 		// Add product and navigate to checkout
-	    inventoryPage.addToCartByProductName(Products.BACKPACK.getName());
-	    headerPage.clickCartIcon();
-	    cartPage.clickOnCheckoutButton();
+		addToCartAndNavigateToCheckout(Products.FLEECE_JACKET);
 	    
 	    // Fill form with the postal code format
-	    checkoutPage.fillCheckoutForm("John", "Doe", postalCode);
-	    checkoutPage.clickContinue();
+		fillCheckoutFormAndContinue(CheckoutData.VALID_USER);
 	    
 	    // Verify navigation to overview page (format accepted)
 	    Assert.assertTrue(page.url().contains("checkout-step-two"));

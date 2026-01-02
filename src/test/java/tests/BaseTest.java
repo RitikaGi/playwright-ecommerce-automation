@@ -25,6 +25,7 @@ import pages.InventoryPage;
 import pages.LoginPage;
 import pages.NavigationPage;
 import pages.ProductPage;
+import utils.TestData.CheckoutData;
 import utils.TestData.Products;
 import utils.TestData.Users;
 import utils.ConfigReader;
@@ -150,5 +151,11 @@ public class BaseTest {
        protected void addToCartAndNavigateToCheckout(Products...products) {
     	   addProductsToCart(products);
     	   navigateToCheckout();
+       }
+       
+       protected void fillCheckoutFormAndContinue(CheckoutData checkoutData) {
+    	   checkoutPage.fillFirstName(checkoutData.getFirstName());
+    	   checkoutPage.fillLastName(checkoutData.getLastName());
+    	   checkoutPage.fillPostalCode(checkoutData.getPostalCode());
        }
 }
