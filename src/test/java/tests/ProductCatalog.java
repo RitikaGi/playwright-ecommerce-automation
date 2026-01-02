@@ -59,7 +59,7 @@ public class ProductCatalog extends BaseTest{
 	//TC_PRODUCT_006: Verify Product Details
 	public void TC_PRODUCT_006_Verify_Product_Details() {
 		
-		Map<String,Map<String,String>> listDetails = addProductsToCartandDetails(Products.BACKPACK);
+		Map<String,String> listDetails = inventoryPage.getProductDetailsFromList(Products.BACKPACK.getName());
 		inventoryPage.clickOnItem(Products.BACKPACK.getName());
 		Map<String,String> pageDetails = productPage.getProductDetailsFromPage();
 		Assert.assertEquals(pageDetails, listDetails, 
