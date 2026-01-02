@@ -3,14 +3,28 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.LoginTest">
+      <class name="tests.CheckoutFlow">
         <methods>
-          <include name="disableAutoLogin"/>
-          <include name="TC_LOGIN_002_Invalid_Username"/>
-          <include name="tearDown"/>
+          <include name="TC_CHECKOUT_005_Checkout_All_Fields_Empty"/>
+          <include name="TC_CHECKOUT_001_Checkout_Step_One_Valid_Info"/>
+          <include name="TC_CHECKOUT_006_Cancel_from_Checkout_Step_One"/>
+          <include name="TC_CHECKOUT_011_Complete_Purchase"/>
+          <include name="TC_CHECKOUT_004_Checkout_Empty_Postal_Code"/>
+          <include name="TC_CHECKOUT_009_Verify_Tax_Calculation"/>
+          <include name="TC_CHECKOUT_010_Cancel_from_Overview_Page"/>
           <include name="setUp"/>
+          <include name="TC_CHECKOUT_007_Verify_Checkout_Overview_Details"/>
+          <include name="TC_CHECKOUT_012_Verify_Order_Confirmation_Message"/>
+          <include name="TC_CHECKOUT_014_Cart_Clears_After_Purchase"/>
+          <include name="TC_CHECKOUT_016_Postal_Code_Format_Validation"/>
+          <include name="TC_CHECKOUT_002_Checkout_Empty_First_Name"/>
+          <include name="TC_CHECKOUT_003_Checkout_Empty_Last_Name"/>
+          <include name="TC_CHECKOUT_013_Return_Home_After_Purchase"/>
+          <include name="TC_CHECKOUT_015_End_to_End_Happy_Path"/>
+          <include name="tearDown"/>
+          <include name="TC_CHECKOUT_008_Verify_Multiple_Items_in_Overview"/>
         </methods>
-      </class> <!-- tests.LoginTest -->
+      </class> <!-- tests.CheckoutFlow -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

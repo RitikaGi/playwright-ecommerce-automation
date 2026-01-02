@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="24" passed="24" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-01T22:19:20 IST" name="Default suite" finished-at="2026-01-01T22:21:39 IST" duration-ms="138664">
+  <suite started-at="2026-01-02T17:19:53 IST" name="Default suite" finished-at="2026-01-02T17:21:00 IST" duration-ms="66540">
     <groups>
     </groups>
-    <test started-at="2026-01-01T22:19:20 IST" name="Default test" finished-at="2026-01-01T22:21:39 IST" duration-ms="138664">
+    <test started-at="2026-01-02T17:19:53 IST" name="Default test" finished-at="2026-01-02T17:21:00 IST" duration-ms="66540">
       <class name="tests.CheckoutFlow">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:19:21 IST" name="setUp" finished-at="2026-01-01T22:19:47 IST" duration-ms="26006" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:19:53 IST" name="setUp" finished-at="2026-01-02T17:20:01 IST" duration-ms="8093" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_001_Checkout_Step_One_Valid_Info()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:19:47 IST" name="TC_CHECKOUT_001_Checkout_Step_One_Valid_Info" finished-at="2026-01-01T22:19:47 IST" duration-ms="677" status="PASS">
+        <test-method signature="TC_CHECKOUT_001_Checkout_Step_One_Valid_Info()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:01 IST" name="TC_CHECKOUT_001_Checkout_Step_One_Valid_Info" finished-at="2026-01-02T17:20:02 IST" duration-ms="444" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CHECKOUT_001_Checkout_Step_One_Valid_Info -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:19:47 IST" name="tearDown" finished-at="2026-01-01T22:19:48 IST" duration-ms="425" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:02 IST" name="tearDown" finished-at="2026-01-02T17:20:02 IST" duration-ms="245" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,15 +26,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:19:48 IST" name="setUp" finished-at="2026-01-01T22:19:50 IST" duration-ms="2546" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:02 IST" name="setUp" finished-at="2026-01-02T17:20:04 IST" duration-ms="1664" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_002_Checkout_Empty_First_Name()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:19:50 IST" name="TC_CHECKOUT_002_Checkout_Empty_First_Name" finished-at="2026-01-01T22:19:51 IST" duration-ms="585" status="PASS">
+        <test-method signature="TC_CHECKOUT_002_Checkout_Empty_First_Name()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:04 IST" name="TC_CHECKOUT_002_Checkout_Empty_First_Name" finished-at="2026-01-02T17:20:04 IST" duration-ms="493" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CHECKOUT_002_Checkout_Empty_First_Name -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:19:51 IST" name="tearDown" finished-at="2026-01-01T22:19:51 IST" duration-ms="457" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:04 IST" name="tearDown" finished-at="2026-01-02T17:20:04 IST" duration-ms="220" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -45,15 +45,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:19:51 IST" name="setUp" finished-at="2026-01-01T22:19:55 IST" duration-ms="3360" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:04 IST" name="setUp" finished-at="2026-01-02T17:20:06 IST" duration-ms="1683" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_003_Checkout_Empty_Last_Name()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:19:55 IST" name="TC_CHECKOUT_003_Checkout_Empty_Last_Name" finished-at="2026-01-01T22:19:55 IST" duration-ms="919" status="PASS">
+        <test-method signature="TC_CHECKOUT_003_Checkout_Empty_Last_Name()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:06 IST" name="TC_CHECKOUT_003_Checkout_Empty_Last_Name" finished-at="2026-01-02T17:20:07 IST" duration-ms="364" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CHECKOUT_003_Checkout_Empty_Last_Name -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:19:56 IST" name="tearDown" finished-at="2026-01-01T22:19:56 IST" duration-ms="590" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:07 IST" name="tearDown" finished-at="2026-01-02T17:20:07 IST" duration-ms="217" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -64,15 +64,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:19:56 IST" name="setUp" finished-at="2026-01-01T22:20:00 IST" duration-ms="3558" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:07 IST" name="setUp" finished-at="2026-01-02T17:20:08 IST" duration-ms="1720" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_004_Checkout_Empty_Postal_Code()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:00 IST" name="TC_CHECKOUT_004_Checkout_Empty_Postal_Code" finished-at="2026-01-01T22:20:01 IST" duration-ms="1094" status="PASS">
+        <test-method signature="TC_CHECKOUT_004_Checkout_Empty_Postal_Code()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:08 IST" name="TC_CHECKOUT_004_Checkout_Empty_Postal_Code" finished-at="2026-01-02T17:20:09 IST" duration-ms="465" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CHECKOUT_004_Checkout_Empty_Postal_Code -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:01 IST" name="tearDown" finished-at="2026-01-01T22:20:01 IST" duration-ms="498" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:09 IST" name="tearDown" finished-at="2026-01-02T17:20:09 IST" duration-ms="231" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -83,15 +83,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:01 IST" name="setUp" finished-at="2026-01-01T22:20:04 IST" duration-ms="3230" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:09 IST" name="setUp" finished-at="2026-01-02T17:20:11 IST" duration-ms="1720" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_005_Checkout_All_Fields_Empty()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:04 IST" name="TC_CHECKOUT_005_Checkout_All_Fields_Empty" finished-at="2026-01-01T22:20:06 IST" duration-ms="1156" status="PASS">
+        <test-method signature="TC_CHECKOUT_005_Checkout_All_Fields_Empty()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:11 IST" name="TC_CHECKOUT_005_Checkout_All_Fields_Empty" finished-at="2026-01-02T17:20:11 IST" duration-ms="396" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CHECKOUT_005_Checkout_All_Fields_Empty -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:06 IST" name="tearDown" finished-at="2026-01-01T22:20:06 IST" duration-ms="557" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:11 IST" name="tearDown" finished-at="2026-01-02T17:20:11 IST" duration-ms="229" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -102,15 +102,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:06 IST" name="setUp" finished-at="2026-01-01T22:20:09 IST" duration-ms="3138" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:11 IST" name="setUp" finished-at="2026-01-02T17:20:13 IST" duration-ms="1765" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_006_Cancel_from_Checkout_Step_One()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:09 IST" name="TC_CHECKOUT_006_Cancel_from_Checkout_Step_One" finished-at="2026-01-01T22:20:10 IST" duration-ms="862" status="PASS">
+        <test-method signature="TC_CHECKOUT_006_Cancel_from_Checkout_Step_One()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:13 IST" name="TC_CHECKOUT_006_Cancel_from_Checkout_Step_One" finished-at="2026-01-02T17:20:14 IST" duration-ms="379" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CHECKOUT_006_Cancel_from_Checkout_Step_One -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:10 IST" name="tearDown" finished-at="2026-01-01T22:20:11 IST" duration-ms="636" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:14 IST" name="tearDown" finished-at="2026-01-02T17:20:14 IST" duration-ms="217" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -121,15 +121,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:11 IST" name="setUp" finished-at="2026-01-01T22:20:14 IST" duration-ms="3423" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:14 IST" name="setUp" finished-at="2026-01-02T17:20:16 IST" duration-ms="1716" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_007_Verify_Checkout_Overview_Details()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:14 IST" name="TC_CHECKOUT_007_Verify_Checkout_Overview_Details" finished-at="2026-01-01T22:20:15 IST" duration-ms="1223" status="PASS">
+        <test-method signature="TC_CHECKOUT_007_Verify_Checkout_Overview_Details()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:16 IST" name="TC_CHECKOUT_007_Verify_Checkout_Overview_Details" finished-at="2026-01-02T17:20:16 IST" duration-ms="514" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CHECKOUT_007_Verify_Checkout_Overview_Details -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:15 IST" name="tearDown" finished-at="2026-01-01T22:20:16 IST" duration-ms="527" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:16 IST" name="tearDown" finished-at="2026-01-02T17:20:16 IST" duration-ms="223" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -140,15 +140,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:16 IST" name="setUp" finished-at="2026-01-01T22:20:19 IST" duration-ms="3119" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:16 IST" name="setUp" finished-at="2026-01-02T17:20:18 IST" duration-ms="1957" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_008_Verify_Multiple_Items_in_Overview()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:19 IST" name="TC_CHECKOUT_008_Verify_Multiple_Items_in_Overview" finished-at="2026-01-01T22:20:21 IST" duration-ms="2052" status="PASS">
+        <test-method signature="TC_CHECKOUT_008_Verify_Multiple_Items_in_Overview()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:18 IST" name="TC_CHECKOUT_008_Verify_Multiple_Items_in_Overview" finished-at="2026-01-02T17:20:19 IST" duration-ms="760" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CHECKOUT_008_Verify_Multiple_Items_in_Overview -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:21 IST" name="tearDown" finished-at="2026-01-01T22:20:22 IST" duration-ms="553" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:19 IST" name="tearDown" finished-at="2026-01-02T17:20:19 IST" duration-ms="228" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -159,15 +159,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:22 IST" name="setUp" finished-at="2026-01-01T22:20:25 IST" duration-ms="3026" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:19 IST" name="setUp" finished-at="2026-01-02T17:20:21 IST" duration-ms="1653" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_009_Verify_Tax_Calculation()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:25 IST" name="TC_CHECKOUT_009_Verify_Tax_Calculation" finished-at="2026-01-01T22:20:26 IST" duration-ms="1306" status="PASS">
+        <test-method signature="TC_CHECKOUT_009_Verify_Tax_Calculation()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:21 IST" name="TC_CHECKOUT_009_Verify_Tax_Calculation" finished-at="2026-01-02T17:20:21 IST" duration-ms="527" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CHECKOUT_009_Verify_Tax_Calculation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:26 IST" name="tearDown" finished-at="2026-01-01T22:20:27 IST" duration-ms="677" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:21 IST" name="tearDown" finished-at="2026-01-02T17:20:22 IST" duration-ms="570" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -178,15 +178,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:27 IST" name="setUp" finished-at="2026-01-01T22:20:30 IST" duration-ms="3498" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:22 IST" name="setUp" finished-at="2026-01-02T17:20:24 IST" duration-ms="1796" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_010_Cancel_from_Overview_Page()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:30 IST" name="TC_CHECKOUT_010_Cancel_from_Overview_Page" finished-at="2026-01-01T22:20:31 IST" duration-ms="946" status="PASS">
+        <test-method signature="TC_CHECKOUT_010_Cancel_from_Overview_Page()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:24 IST" name="TC_CHECKOUT_010_Cancel_from_Overview_Page" finished-at="2026-01-02T17:20:24 IST" duration-ms="672" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CHECKOUT_010_Cancel_from_Overview_Page -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:31 IST" name="tearDown" finished-at="2026-01-01T22:20:32 IST" duration-ms="433" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:24 IST" name="tearDown" finished-at="2026-01-02T17:20:25 IST" duration-ms="242" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -197,15 +197,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:32 IST" name="setUp" finished-at="2026-01-01T22:20:35 IST" duration-ms="3390" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:25 IST" name="setUp" finished-at="2026-01-02T17:20:26 IST" duration-ms="1649" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_011_Complete_Purchase()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:35 IST" name="TC_CHECKOUT_011_Complete_Purchase" finished-at="2026-01-01T22:20:36 IST" duration-ms="1080" status="PASS">
+        <test-method signature="TC_CHECKOUT_011_Complete_Purchase()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:26 IST" name="TC_CHECKOUT_011_Complete_Purchase" finished-at="2026-01-02T17:20:27 IST" duration-ms="506" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CHECKOUT_011_Complete_Purchase -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:36 IST" name="tearDown" finished-at="2026-01-01T22:20:37 IST" duration-ms="571" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:27 IST" name="tearDown" finished-at="2026-01-02T17:20:27 IST" duration-ms="225" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -216,15 +216,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:37 IST" name="setUp" finished-at="2026-01-01T22:20:40 IST" duration-ms="3211" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:27 IST" name="setUp" finished-at="2026-01-02T17:20:29 IST" duration-ms="1810" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_012_Verify_Order_Confirmation_Message()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:40 IST" name="TC_CHECKOUT_012_Verify_Order_Confirmation_Message" finished-at="2026-01-01T22:20:41 IST" duration-ms="1208" status="PASS">
+        <test-method signature="TC_CHECKOUT_012_Verify_Order_Confirmation_Message()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:29 IST" name="TC_CHECKOUT_012_Verify_Order_Confirmation_Message" finished-at="2026-01-02T17:20:29 IST" duration-ms="462" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CHECKOUT_012_Verify_Order_Confirmation_Message -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:41 IST" name="tearDown" finished-at="2026-01-01T22:20:42 IST" duration-ms="621" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:29 IST" name="tearDown" finished-at="2026-01-02T17:20:30 IST" duration-ms="217" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -235,15 +235,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:42 IST" name="setUp" finished-at="2026-01-01T22:20:45 IST" duration-ms="3328" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:30 IST" name="setUp" finished-at="2026-01-02T17:20:32 IST" duration-ms="2013" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_013_Return_Home_After_Purchase()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:45 IST" name="TC_CHECKOUT_013_Return_Home_After_Purchase" finished-at="2026-01-01T22:20:47 IST" duration-ms="1624" status="PASS">
+        <test-method signature="TC_CHECKOUT_013_Return_Home_After_Purchase()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:32 IST" name="TC_CHECKOUT_013_Return_Home_After_Purchase" finished-at="2026-01-02T17:20:32 IST" duration-ms="740" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CHECKOUT_013_Return_Home_After_Purchase -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:47 IST" name="tearDown" finished-at="2026-01-01T22:20:47 IST" duration-ms="573" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:32 IST" name="tearDown" finished-at="2026-01-02T17:20:33 IST" duration-ms="227" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -254,15 +254,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:47 IST" name="setUp" finished-at="2026-01-01T22:20:51 IST" duration-ms="3525" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:33 IST" name="setUp" finished-at="2026-01-02T17:20:35 IST" duration-ms="2182" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_014_Cart_Clears_After_Purchase()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:51 IST" name="TC_CHECKOUT_014_Cart_Clears_After_Purchase" finished-at="2026-01-01T22:20:52 IST" duration-ms="1438" status="PASS">
+        <test-method signature="TC_CHECKOUT_014_Cart_Clears_After_Purchase()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:35 IST" name="TC_CHECKOUT_014_Cart_Clears_After_Purchase" finished-at="2026-01-02T17:20:35 IST" duration-ms="600" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CHECKOUT_014_Cart_Clears_After_Purchase -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:52 IST" name="tearDown" finished-at="2026-01-01T22:20:53 IST" duration-ms="536" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:35 IST" name="tearDown" finished-at="2026-01-02T17:20:36 IST" duration-ms="249" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -273,15 +273,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:53 IST" name="setUp" finished-at="2026-01-01T22:20:56 IST" duration-ms="3241" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:36 IST" name="setUp" finished-at="2026-01-02T17:20:37 IST" duration-ms="1651" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_015_End_to_End_Happy_Path()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:56 IST" name="TC_CHECKOUT_015_End_to_End_Happy_Path" finished-at="2026-01-01T22:20:58 IST" duration-ms="1478" status="PASS">
+        <test-method signature="TC_CHECKOUT_015_End_to_End_Happy_Path()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:37 IST" name="TC_CHECKOUT_015_End_to_End_Happy_Path" finished-at="2026-01-02T17:20:38 IST" duration-ms="742" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CHECKOUT_015_End_to_End_Happy_Path -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:58 IST" name="tearDown" finished-at="2026-01-01T22:20:58 IST" duration-ms="545" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:38 IST" name="tearDown" finished-at="2026-01-02T17:20:38 IST" duration-ms="220" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -292,11 +292,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:20:58 IST" name="setUp" finished-at="2026-01-01T22:21:01 IST" duration-ms="2924" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:38 IST" name="setUp" finished-at="2026-01-02T17:20:40 IST" duration-ms="1755" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:01 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-01T22:21:02 IST" duration-ms="733" status="PASS">
+        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:40 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-02T17:20:40 IST" duration-ms="396" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -312,7 +312,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CHECKOUT_016_Postal_Code_Format_Validation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:02 IST" name="tearDown" finished-at="2026-01-01T22:21:02 IST" duration-ms="551" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:40 IST" name="tearDown" finished-at="2026-01-02T17:20:41 IST" duration-ms="242" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -323,11 +323,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:02 IST" name="setUp" finished-at="2026-01-01T22:21:06 IST" duration-ms="3556" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:41 IST" name="setUp" finished-at="2026-01-02T17:20:42 IST" duration-ms="1720" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:06 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-01T22:21:07 IST" duration-ms="1067" status="PASS">
+        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:42 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-02T17:20:43 IST" duration-ms="425" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -343,7 +343,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CHECKOUT_016_Postal_Code_Format_Validation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:07 IST" name="tearDown" finished-at="2026-01-01T22:21:08 IST" duration-ms="621" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:43 IST" name="tearDown" finished-at="2026-01-02T17:20:43 IST" duration-ms="233" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -354,11 +354,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:08 IST" name="setUp" finished-at="2026-01-01T22:21:11 IST" duration-ms="3218" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:43 IST" name="setUp" finished-at="2026-01-02T17:20:45 IST" duration-ms="1790" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:11 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-01T22:21:12 IST" duration-ms="907" status="PASS">
+        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:45 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-02T17:20:45 IST" duration-ms="412" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -374,7 +374,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CHECKOUT_016_Postal_Code_Format_Validation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:12 IST" name="tearDown" finished-at="2026-01-01T22:21:12 IST" duration-ms="456" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:45 IST" name="tearDown" finished-at="2026-01-02T17:20:45 IST" duration-ms="231" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -385,11 +385,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:12 IST" name="setUp" finished-at="2026-01-01T22:21:15 IST" duration-ms="3177" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:45 IST" name="setUp" finished-at="2026-01-02T17:20:47 IST" duration-ms="1781" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:15 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-01T22:21:16 IST" duration-ms="895" status="PASS">
+        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:47 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-02T17:20:48 IST" duration-ms="407" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -405,7 +405,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CHECKOUT_016_Postal_Code_Format_Validation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:16 IST" name="tearDown" finished-at="2026-01-01T22:21:17 IST" duration-ms="485" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:48 IST" name="tearDown" finished-at="2026-01-02T17:20:48 IST" duration-ms="227" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -416,11 +416,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:17 IST" name="setUp" finished-at="2026-01-01T22:21:20 IST" duration-ms="3030" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:48 IST" name="setUp" finished-at="2026-01-02T17:20:50 IST" duration-ms="1715" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:20 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-01T22:21:20 IST" duration-ms="644" status="PASS">
+        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:50 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-02T17:20:50 IST" duration-ms="387" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -436,7 +436,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CHECKOUT_016_Postal_Code_Format_Validation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:20 IST" name="tearDown" finished-at="2026-01-01T22:21:21 IST" duration-ms="534" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:50 IST" name="tearDown" finished-at="2026-01-02T17:20:50 IST" duration-ms="233" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -447,11 +447,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:21 IST" name="setUp" finished-at="2026-01-01T22:21:24 IST" duration-ms="3386" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:50 IST" name="setUp" finished-at="2026-01-02T17:20:52 IST" duration-ms="1657" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:24 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-01T22:21:25 IST" duration-ms="766" status="PASS">
+        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:52 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-02T17:20:52 IST" duration-ms="363" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -467,7 +467,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CHECKOUT_016_Postal_Code_Format_Validation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:25 IST" name="tearDown" finished-at="2026-01-01T22:21:26 IST" duration-ms="535" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:52 IST" name="tearDown" finished-at="2026-01-02T17:20:52 IST" duration-ms="247" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -478,11 +478,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:26 IST" name="setUp" finished-at="2026-01-01T22:21:29 IST" duration-ms="3208" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:52 IST" name="setUp" finished-at="2026-01-02T17:20:54 IST" duration-ms="1717" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:29 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-01T22:21:30 IST" duration-ms="872" status="PASS">
+        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:54 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-02T17:20:55 IST" duration-ms="416" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -498,7 +498,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CHECKOUT_016_Postal_Code_Format_Validation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:30 IST" name="tearDown" finished-at="2026-01-01T22:21:30 IST" duration-ms="409" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:55 IST" name="tearDown" finished-at="2026-01-02T17:20:55 IST" duration-ms="228" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -509,11 +509,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:30 IST" name="setUp" finished-at="2026-01-01T22:21:33 IST" duration-ms="3219" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:55 IST" name="setUp" finished-at="2026-01-02T17:20:57 IST" duration-ms="1796" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:33 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-01T22:21:34 IST" duration-ms="623" status="PASS">
+        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:57 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-02T17:20:57 IST" duration-ms="450" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -529,7 +529,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CHECKOUT_016_Postal_Code_Format_Validation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:34 IST" name="tearDown" finished-at="2026-01-01T22:21:34 IST" duration-ms="558" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:57 IST" name="tearDown" finished-at="2026-01-02T17:20:57 IST" duration-ms="228" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -540,11 +540,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:34 IST" name="setUp" finished-at="2026-01-01T22:21:38 IST" duration-ms="3306" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:57 IST" name="setUp" finished-at="2026-01-02T17:20:59 IST" duration-ms="1769" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:38 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-01T22:21:38 IST" duration-ms="601" status="PASS">
+        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:20:59 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-02T17:21:00 IST" duration-ms="447" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -560,7 +560,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CHECKOUT_016_Postal_Code_Format_Validation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-01T22:21:38 IST" name="tearDown" finished-at="2026-01-01T22:21:39 IST" duration-ms="562" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4c583ecf]" started-at="2026-01-02T17:21:00 IST" name="tearDown" finished-at="2026-01-02T17:21:00 IST" duration-ms="244" status="PASS">
           <params>
             <param index="0">
               <value>

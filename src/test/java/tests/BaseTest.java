@@ -157,5 +157,6 @@ public class BaseTest {
     	   checkoutPage.fillFirstName(checkoutData.getFirstName());
     	   checkoutPage.fillLastName(checkoutData.getLastName());
     	   checkoutPage.fillPostalCode(checkoutData.getPostalCode());
+    	   checkoutPage.clickContinue();
        }
 }
