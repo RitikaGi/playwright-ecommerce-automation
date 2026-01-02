@@ -159,4 +159,11 @@ public class BaseTest {
     	   checkoutPage.fillPostalCode(checkoutData.getPostalCode());
     	   checkoutPage.clickContinue();
        }
+       
+       protected void fillCheckoutFormAndContinueWithCustomPostalCode(String firstName, String lastName, String postalCode) {
+    	   checkoutPage.fillFirstName(firstName);
+    	   checkoutPage.fillLastName(lastName);
+    	   checkoutPage.fillPostalCode(postalCode);
+    	   checkoutPage.clickContinue();
+       }
 }

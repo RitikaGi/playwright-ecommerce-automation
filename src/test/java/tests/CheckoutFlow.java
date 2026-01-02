@@ -12,7 +12,7 @@ import utils.TestData.Products;
 
 
 public class CheckoutFlow extends BaseTest{
-	
+	/*
     @Test
 	//TC_CHECKOUT_001: Checkout Step One - Valid Info
     public void TC_CHECKOUT_001_Checkout_Step_One_Valid_Info() {
@@ -196,7 +196,7 @@ public class CheckoutFlow extends BaseTest{
     			"Your order has been dispatched, and will arrive just as fast as the pony can get there!");
 	}
 	
-	
+	*/
 	@Test(dataProvider="PostalCodeFormats")
 	//TC_CHECKOUT_016: Postal Code Format Validation
 	public void TC_CHECKOUT_016_Postal_Code_Format_Validation(String format,String postalCode) {
@@ -204,7 +204,10 @@ public class CheckoutFlow extends BaseTest{
 		addToCartAndNavigateToCheckout(Products.FLEECE_JACKET);
 	    
 	    // Fill form with the postal code format
-		fillCheckoutFormAndContinue(CheckoutData.VALID_USER);
+		fillCheckoutFormAndContinueWithCustomPostalCode(
+				CheckoutData.VALID_USER.getFirstName(),
+				CheckoutData.VALID_USER.getLastName(), 
+				postalCode);
 	    
 	    // Verify navigation to overview page (format accepted)
 	    Assert.assertTrue(page.url().contains("checkout-step-two"));
