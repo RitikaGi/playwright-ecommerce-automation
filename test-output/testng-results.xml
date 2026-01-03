@@ -1,292 +1,184 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+<testng-results ignored="1" total="10" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-02T17:47:16 IST" name="Default suite" finished-at="2026-01-02T17:47:45 IST" duration-ms="28639">
+  <suite started-at="2026-01-03T08:44:09 IST" name="Default suite" finished-at="2026-01-03T08:44:45 IST" duration-ms="35852">
     <groups>
     </groups>
-    <test started-at="2026-01-02T17:47:16 IST" name="Default test" finished-at="2026-01-02T17:47:45 IST" duration-ms="28639">
-      <class name="tests.CheckoutFlow">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:16 IST" name="setUp" finished-at="2026-01-02T17:47:25 IST" duration-ms="8966" status="PASS">
+    <test started-at="2026-01-03T08:44:09 IST" name="Default test" finished-at="2026-01-03T08:44:45 IST" duration-ms="35852">
+      <class name="tests.CartOperations">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:09 IST" name="setUp" finished-at="2026-01-03T08:44:23 IST" duration-ms="13126" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:25 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-02T17:47:26 IST" duration-ms="415" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Numeric]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[121003]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="TC_CART_001_View_Cart_with_Single_Item()[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:23 IST" name="TC_CART_001_View_Cart_with_Single_Item" finished-at="2026-01-03T08:44:23 IST" duration-ms="278" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_CHECKOUT_016_Postal_Code_Format_Validation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:26 IST" name="tearDown" finished-at="2026-01-02T17:47:26 IST" duration-ms="300" status="PASS">
+        </test-method> <!-- TC_CART_001_View_Cart_with_Single_Item -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:23 IST" name="tearDown" finished-at="2026-01-03T08:44:23 IST" duration-ms="345" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_CHECKOUT_016_Postal_Code_Format_Validation status=SUCCESS method=CheckoutFlow.TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4562e04d] output={null}]]]>
+                <![CDATA[[TestResult name=TC_CART_001_View_Cart_with_Single_Item status=SUCCESS method=CartOperations.TC_CART_001_View_Cart_with_Single_Item()[pri:0, instance:tests.CartOperations@6aeb35e6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:26 IST" name="setUp" finished-at="2026-01-02T17:47:28 IST" duration-ms="1662" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:23 IST" name="setUp" finished-at="2026-01-03T08:44:25 IST" duration-ms="1994" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:28 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-02T17:47:28 IST" duration-ms="404" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Alphanumeric]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[A1B2C3]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="TC_CART_002_View_Cart_with_Multiple_Items()[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:25 IST" name="TC_CART_002_View_Cart_with_Multiple_Items" finished-at="2026-01-03T08:44:26 IST" duration-ms="649" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_CHECKOUT_016_Postal_Code_Format_Validation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:28 IST" name="tearDown" finished-at="2026-01-02T17:47:28 IST" duration-ms="238" status="PASS">
+        </test-method> <!-- TC_CART_002_View_Cart_with_Multiple_Items -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:26 IST" name="tearDown" finished-at="2026-01-03T08:44:26 IST" duration-ms="324" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_CHECKOUT_016_Postal_Code_Format_Validation status=SUCCESS method=CheckoutFlow.TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4562e04d] output={null}]]]>
+                <![CDATA[[TestResult name=TC_CART_002_View_Cart_with_Multiple_Items status=SUCCESS method=CartOperations.TC_CART_002_View_Cart_with_Multiple_Items()[pri:0, instance:tests.CartOperations@6aeb35e6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:28 IST" name="setUp" finished-at="2026-01-02T17:47:30 IST" duration-ms="1621" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:26 IST" name="setUp" finished-at="2026-01-03T08:44:28 IST" duration-ms="2076" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:30 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-02T17:47:30 IST" duration-ms="409" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Special chars]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[12-10]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="TC_CART_003_Remove_Item_from_Cart()[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:28 IST" name="TC_CART_003_Remove_Item_from_Cart" finished-at="2026-01-03T08:44:29 IST" duration-ms="431" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_CHECKOUT_016_Postal_Code_Format_Validation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:30 IST" name="tearDown" finished-at="2026-01-02T17:47:31 IST" duration-ms="233" status="PASS">
+        </test-method> <!-- TC_CART_003_Remove_Item_from_Cart -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:29 IST" name="tearDown" finished-at="2026-01-03T08:44:29 IST" duration-ms="384" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_CHECKOUT_016_Postal_Code_Format_Validation status=SUCCESS method=CheckoutFlow.TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4562e04d] output={null}]]]>
+                <![CDATA[[TestResult name=TC_CART_003_Remove_Item_from_Cart status=SUCCESS method=CartOperations.TC_CART_003_Remove_Item_from_Cart()[pri:0, instance:tests.CartOperations@6aeb35e6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:31 IST" name="setUp" finished-at="2026-01-02T17:47:32 IST" duration-ms="1739" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:29 IST" name="setUp" finished-at="2026-01-03T08:44:31 IST" duration-ms="2047" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:32 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-02T17:47:33 IST" duration-ms="481" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Mixed case]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[a1B2c3]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="TC_CART_004_Remove_All_Items()[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:31 IST" name="TC_CART_004_Remove_All_Items" finished-at="2026-01-03T08:44:32 IST" duration-ms="423" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_CHECKOUT_016_Postal_Code_Format_Validation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:33 IST" name="tearDown" finished-at="2026-01-02T17:47:33 IST" duration-ms="221" status="PASS">
+        </test-method> <!-- TC_CART_004_Remove_All_Items -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:32 IST" name="tearDown" finished-at="2026-01-03T08:44:32 IST" duration-ms="324" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_CHECKOUT_016_Postal_Code_Format_Validation status=SUCCESS method=CheckoutFlow.TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4562e04d] output={null}]]]>
+                <![CDATA[[TestResult name=TC_CART_004_Remove_All_Items status=SUCCESS method=CartOperations.TC_CART_004_Remove_All_Items()[pri:0, instance:tests.CartOperations@6aeb35e6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:33 IST" name="setUp" finished-at="2026-01-02T17:47:35 IST" duration-ms="1733" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:32 IST" name="setUp" finished-at="2026-01-03T08:44:34 IST" duration-ms="1925" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:35 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-02T17:47:35 IST" duration-ms="505" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[With spaces]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[12 10 03]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="TC_CART_005_Continue_Shopping_from_Cart()[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:34 IST" name="TC_CART_005_Continue_Shopping_from_Cart" finished-at="2026-01-03T08:44:34 IST" duration-ms="287" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_CHECKOUT_016_Postal_Code_Format_Validation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:35 IST" name="tearDown" finished-at="2026-01-02T17:47:36 IST" duration-ms="234" status="PASS">
+        </test-method> <!-- TC_CART_005_Continue_Shopping_from_Cart -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:34 IST" name="tearDown" finished-at="2026-01-03T08:44:34 IST" duration-ms="351" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_CHECKOUT_016_Postal_Code_Format_Validation status=SUCCESS method=CheckoutFlow.TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4562e04d] output={null}]]]>
+                <![CDATA[[TestResult name=TC_CART_005_Continue_Shopping_from_Cart status=SUCCESS method=CartOperations.TC_CART_005_Continue_Shopping_from_Cart()[pri:0, instance:tests.CartOperations@6aeb35e6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:36 IST" name="setUp" finished-at="2026-01-02T17:47:37 IST" duration-ms="1694" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:34 IST" name="setUp" finished-at="2026-01-03T08:44:36 IST" duration-ms="1846" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:37 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-02T17:47:38 IST" duration-ms="447" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Only letters]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[ABCDEF]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="TC_CART_006_View_Empty_Cart()[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:36 IST" name="TC_CART_006_View_Empty_Cart" finished-at="2026-01-03T08:44:36 IST" duration-ms="165" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_CHECKOUT_016_Postal_Code_Format_Validation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:38 IST" name="tearDown" finished-at="2026-01-02T17:47:38 IST" duration-ms="233" status="PASS">
+        </test-method> <!-- TC_CART_006_View_Empty_Cart -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:36 IST" name="tearDown" finished-at="2026-01-03T08:44:37 IST" duration-ms="374" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_CHECKOUT_016_Postal_Code_Format_Validation status=SUCCESS method=CheckoutFlow.TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4562e04d] output={null}]]]>
+                <![CDATA[[TestResult name=TC_CART_006_View_Empty_Cart status=SUCCESS method=CartOperations.TC_CART_006_View_Empty_Cart()[pri:0, instance:tests.CartOperations@6aeb35e6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:38 IST" name="setUp" finished-at="2026-01-02T17:47:40 IST" duration-ms="1686" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:37 IST" name="setUp" finished-at="2026-01-03T08:44:39 IST" duration-ms="2223" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:40 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-02T17:47:40 IST" duration-ms="420" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Long format]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[123456789]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="TC_CART_007_Cart_Persistence_Across_Pages()[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:39 IST" name="TC_CART_007_Cart_Persistence_Across_Pages" finished-at="2026-01-03T08:44:39 IST" duration-ms="380" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_CHECKOUT_016_Postal_Code_Format_Validation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:40 IST" name="tearDown" finished-at="2026-01-02T17:47:40 IST" duration-ms="235" status="PASS">
+        </test-method> <!-- TC_CART_007_Cart_Persistence_Across_Pages -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:39 IST" name="tearDown" finished-at="2026-01-03T08:44:40 IST" duration-ms="286" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_CHECKOUT_016_Postal_Code_Format_Validation status=SUCCESS method=CheckoutFlow.TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4562e04d] output={null}]]]>
+                <![CDATA[[TestResult name=TC_CART_007_Cart_Persistence_Across_Pages status=SUCCESS method=CartOperations.TC_CART_007_Cart_Persistence_Across_Pages()[pri:0, instance:tests.CartOperations@6aeb35e6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:40 IST" name="setUp" finished-at="2026-01-02T17:47:42 IST" duration-ms="1692" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:40 IST" name="setUp" finished-at="2026-01-03T08:44:42 IST" duration-ms="2093" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:42 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-02T17:47:42 IST" duration-ms="433" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Single digit]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="TC_CART_008_Proceed_to_Checkout_from_Cart_With_Item()[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:42 IST" name="TC_CART_008_Proceed_to_Checkout_from_Cart_With_Item" finished-at="2026-01-03T08:44:42 IST" duration-ms="360" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_CHECKOUT_016_Postal_Code_Format_Validation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:42 IST" name="tearDown" finished-at="2026-01-02T17:47:43 IST" duration-ms="214" status="PASS">
+        </test-method> <!-- TC_CART_008_Proceed_to_Checkout_from_Cart_With_Item -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:42 IST" name="tearDown" finished-at="2026-01-03T08:44:42 IST" duration-ms="323" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_CHECKOUT_016_Postal_Code_Format_Validation status=SUCCESS method=CheckoutFlow.TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4562e04d] output={null}]]]>
+                <![CDATA[[TestResult name=TC_CART_008_Proceed_to_Checkout_from_Cart_With_Item status=SUCCESS method=CartOperations.TC_CART_008_Proceed_to_Checkout_from_Cart_With_Item()[pri:0, instance:tests.CartOperations@6aeb35e6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:43 IST" name="setUp" finished-at="2026-01-02T17:47:44 IST" duration-ms="1689" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:42 IST" name="setUp" finished-at="2026-01-03T08:44:44 IST" duration-ms="1868" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:44 IST" name="TC_CHECKOUT_016_Postal_Code_Format_Validation" data-provider="PostalCodeFormats" finished-at="2026-01-02T17:47:45 IST" duration-ms="434" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Empty with spaces]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[   ]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="TC_CART_009_Cart_Badge_Accuracy()[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:44 IST" name="TC_CART_009_Cart_Badge_Accuracy" finished-at="2026-01-03T08:44:45 IST" duration-ms="435" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_CHECKOUT_016_Postal_Code_Format_Validation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutFlow@4562e04d]" started-at="2026-01-02T17:47:45 IST" name="tearDown" finished-at="2026-01-02T17:47:45 IST" duration-ms="217" status="PASS">
+        </test-method> <!-- TC_CART_009_Cart_Badge_Accuracy -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CartOperations@6aeb35e6]" started-at="2026-01-03T08:44:45 IST" name="tearDown" finished-at="2026-01-03T08:44:45 IST" duration-ms="356" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_CHECKOUT_016_Postal_Code_Format_Validation status=SUCCESS method=CheckoutFlow.TC_CHECKOUT_016_Postal_Code_Format_Validation(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutFlow@4562e04d] output={null}]]]>
+                <![CDATA[[TestResult name=TC_CART_009_Cart_Badge_Accuracy status=SUCCESS method=CartOperations.TC_CART_009_Cart_Badge_Accuracy()[pri:0, instance:tests.CartOperations@6aeb35e6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.CheckoutFlow -->
+      </class> <!-- tests.CartOperations -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

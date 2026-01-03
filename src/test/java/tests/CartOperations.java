@@ -32,12 +32,8 @@ public class CartOperations extends BaseTest{
 	 //TC_CART_002: View Cart with Multiple Items
 	 public void TC_CART_002_View_Cart_with_Multiple_Items() {
 		Products[] products = {Products.ONESIE, Products.BIKE_LIGHT, Products.BACKPACK};
-		 Map<String,Map<String,String>> expectedDetails = new HashMap<>();
-		 for(Products product: products) {
-			 expectedDetails.put(product.getName(), inventoryPage.getProductDetailsFromList(product.getName()));
-			 inventoryPage.addToCartByProductName(product.getName());
-		 }
-		 headerPage.clickCartIcon();
+		 Map<String,Map<String,String>> expectedDetails = addProductsToCartandDetails(products);
+	     navigateToCart();
 		 Assert.assertEquals(headerPage.getCartBadgeCount(), "3");
 		 for(Products product: products) {
 			 Assert.assertEquals(cartPage.getProductDetailsFromCart(product.getName()), expectedDetails.get(product.getName()));
@@ -50,10 +46,8 @@ public class CartOperations extends BaseTest{
 	//TC_CART_003: Remove Item from Cart
 	public void TC_CART_003_Remove_Item_from_Cart() {
 		 Products[] products = {Products.ONESIE, Products.BIKE_LIGHT};
-	 for(Products product: products) {
-		 inventoryPage.addToCartByProductName(product.getName());
-	 }
-	 headerPage.clickCartIcon();
+	 addProductsToCart(products);
+	 navigateToCart();
 	 cartPage.removeItemFromCart(Products.ONESIE.getName());
 	 Assert.assertEquals(headerPage.getCartBadgeCount(), "1");
 	 Assert.assertEquals(cartPage.getItemQuantityOnCart(Products.BIKE_LIGHT.getName()),"1");
@@ -65,9 +59,7 @@ public class CartOperations extends BaseTest{
 	//TC_CART_004: Remove All Items
 	public void TC_CART_004_Remove_All_Items() {
 		 Products[] products = {Products.ONESIE, Products.BIKE_LIGHT};
-		 for(Products product: products) {
-			 inventoryPage.addToCartByProductName(product.getName());
-		 }
+		 addProductsToCart(products);
 		 Assert.assertEquals(headerPage.getCartBadgeCount(), "2");
 		 headerPage.clickCartIcon();
 		 Assert.assertEquals(2,cartPage.getCartItemCount());
@@ -99,9 +91,7 @@ public class CartOperations extends BaseTest{
 	//TC_CART_007: Cart Persistence Across Pages
 	public void TC_CART_007_Cart_Persistence_Across_Pages() {
 		 Products[] products = {Products.ONESIE, Products.BACKPACK};
-		 for(Products product: products) {
-			 inventoryPage.addToCartByProductName(product.getName());
-		 }
+		 addProductsToCart(products);
 		 Assert.assertEquals(headerPage.getCartBadgeCount(), "2");
 		 headerPage.clickCartIcon();
 		 cartPage.continueShopping();
@@ -111,9 +101,8 @@ public class CartOperations extends BaseTest{
 	 @Test
 	//TC_CART_008: Proceed to Checkout from Cart
 	public void TC_CART_008_Proceed_to_Checkout_from_Cart_With_Item() { 
-		 inventoryPage.addToCartByProductName(Products.ONESIE.getName());
-		 headerPage.clickCartIcon();
-		 cartPage.clickOnCheckoutButton();
+		 addProductsToCart(Products.ONESIE);
+		 navigateToCheckout();
 		 Assert.assertTrue(page.url().contains("checkout-step-one"));
 	 }
 	 
@@ -134,8 +123,7 @@ public class CartOperations extends BaseTest{
 		//TC_CART_010: Proceed to Checkout from Cart Without Item
 	   
 		public void TC_CART_008_Proceed_to_Checkout_from_Cart_Without_Item() { 
-			 headerPage.clickCartIcon();
-			 cartPage.clickOnCheckoutButton();
+		     navigateToCheckout();
 			 Assert.assertFalse(page.url().contains("checkout-step-one"));
 		 }
 		 
