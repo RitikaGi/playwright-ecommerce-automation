@@ -8,12 +8,15 @@
             <class name="tests.LoginTest"/>
             
             <!-- Product Catalog Tests (10 tests) -->
-            <class name="tests.ProductCatalog"/>
+            <class name="tests.ProductCatalogTest"/>
             
             <!-- Checkout Flow Tests (16 tests) -->
-            <class name="tests.CheckoutFlow"/>
+            <class name="tests.CheckoutFlowTest"/>
             <!--Navigation and UI Tests(8 tests)-->
-            <class name="tests.NavigationAndUI"/>
+            <class name="tests.NavigationAndUITest"/>
+            <!--Cart Operations Tests (10 tests)-->
+            <class name="tests.CartOperationsTest"/>
+            
         </classes>
     </test>
     
