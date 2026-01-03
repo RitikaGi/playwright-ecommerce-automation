@@ -1,6 +1,5 @@
 package tests;
 
-import java.util.HashMap;
 import java.util.Map;
 
 import org.testng.Assert;
@@ -11,8 +10,8 @@ import utils.TestData.CheckoutData;
 import utils.TestData.Products;
 
 
-public class CheckoutFlow extends BaseTest{
-	/*
+public class CheckoutFlowTest extends BaseTest{
+	
     @Test
 	//TC_CHECKOUT_001: Checkout Step One - Valid Info
     public void TC_CHECKOUT_001_Checkout_Step_One_Valid_Info() {
@@ -196,7 +195,7 @@ public class CheckoutFlow extends BaseTest{
     			"Your order has been dispatched, and will arrive just as fast as the pony can get there!");
 	}
 	
-	*/
+	
 	@Test(dataProvider="PostalCodeFormats")
 	//TC_CHECKOUT_016: Postal Code Format Validation
 	public void TC_CHECKOUT_016_Postal_Code_Format_Validation(String format,String postalCode) {

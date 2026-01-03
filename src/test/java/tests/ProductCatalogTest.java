@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import utils.TestData.Products;
 
-public class ProductCatalog extends BaseTest{
+public class ProductCatalogTest extends BaseTest{
 	  
 	@Test
 	//TC_PRODUCT_001: Verify All Products Load

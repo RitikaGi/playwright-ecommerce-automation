@@ -1,19 +1,13 @@
 package tests;
-
-import static org.testng.Assert.assertEquals;
-
-import java.util.HashMap;
 import java.util.Map;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import pages.CartPage;
-import pages.HeaderPage;
-import pages.InventoryPage;
+
 import utils.TestData.Products;
 
-public class CartOperations extends BaseTest{
+public class CartOperationsTest extends BaseTest{
 	
 	
 	 @Test

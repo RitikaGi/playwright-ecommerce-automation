@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import utils.TestData.Products;
 
-public class NavigationAndUI extends BaseTest{
+public class NavigationAndUITest extends BaseTest{
 	
 	
 	  @Test
