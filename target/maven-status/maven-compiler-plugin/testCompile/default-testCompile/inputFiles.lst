@@ -1,1 +1,16 @@
-C:\Users\Pc\eclipse-workspace\playwright_demo\src\test\java\com\playwright\EcommerceTest.java
+C:\Users\Pc\eclipse-workspace\playwright_demo\src\test\java\pages\NavigationPage.java
+C:\Users\Pc\eclipse-workspace\playwright_demo\src\test\java\pages\InventoryPage.java
+C:\Users\Pc\eclipse-workspace\playwright_demo\src\test\java\pages\CheckoutPage.java
+C:\Users\Pc\eclipse-workspace\playwright_demo\src\test\java\pages\HeaderPage.java
+C:\Users\Pc\eclipse-workspace\playwright_demo\src\test\java\tests\NavigationAndUITest.java
+C:\Users\Pc\eclipse-workspace\playwright_demo\src\test\java\pages\LoginPage.java
+C:\Users\Pc\eclipse-workspace\playwright_demo\src\test\java\tests\ProductCatalogTest.java
+C:\Users\Pc\eclipse-workspace\playwright_demo\src\test\java\pages\FooterPage.java
+C:\Users\Pc\eclipse-workspace\playwright_demo\src\test\java\tests\CheckoutFlowTest.java
+C:\Users\Pc\eclipse-workspace\playwright_demo\src\test\java\pages\ProductPage.java
+C:\Users\Pc\eclipse-workspace\playwright_demo\src\test\java\utils\TestData.java
+C:\Users\Pc\eclipse-workspace\playwright_demo\src\test\java\pages\CartPage.java
+C:\Users\Pc\eclipse-workspace\playwright_demo\src\test\java\tests\CartOperationsTest.java
+C:\Users\Pc\eclipse-workspace\playwright_demo\src\test\java\tests\LoginTest.java
+C:\Users\Pc\eclipse-workspace\playwright_demo\src\test\java\utils\ConfigReader.java
+C:\Users\Pc\eclipse-workspace\playwright_demo\src\test\java\tests\BaseTest.java

@@ -6,7 +6,7 @@
 
   <groupId>com.playwright</groupId>
   <artifactId>playwright_demo</artifactId>
-  <version>Y</version>
+  <version>1.0.0</version>
 
   <name>playwright_demo</name>
   <!-- FIXME change it to the project's website -->
@@ -49,11 +49,7 @@
       <artifactId>playwright</artifactId>
       <version>1.38.0</version>
     </dependency>
-    <dependency>
-    	<groupId>rest_api_automation</groupId>
-    	<artifactId>rest_api_automation</artifactId>
-    	<version>0.0.1-SNAPSHOT</version>
-    </dependency>
+    
   </dependencies>
 
   <build>
