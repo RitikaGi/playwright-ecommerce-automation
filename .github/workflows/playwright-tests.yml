@@ -33,6 +33,31 @@ jobs:
       - name: Run Playwright tests
         run: mvn clean test
         
+      # Generate Allure Report
+      - name: Generate Allure Report
+        if: always()
+        run: mvn allure:report
+        
+      # Upload Allure Report as Artifact
+      - name: Upload Allure Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: target/site/allure-maven-plugin/
+          retention-days: 30
+      - name: Generate Allure Report
+        if: always()
+        run: mvn allure:report
+        
+      # Upload Allure Report as Artifact
+      - name: Upload Allure Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: target/site/allure-maven-plugin/
+          retention-days: 30  
           
       - name: Upload TestNG Reports
         if: always()

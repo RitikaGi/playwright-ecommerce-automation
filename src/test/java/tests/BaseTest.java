@@ -1,6 +1,8 @@
 package tests;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -17,6 +19,7 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 import com.microsoft.playwright.Tracing;
 
+import io.qameta.allure.Allure;
 import pages.CartPage;
 import pages.CheckoutPage;
 import pages.FooterPage;
@@ -104,8 +107,11 @@ public class BaseTest {
 			
 			String screenshotName = screenshotDir+"/"+testName+"-"+timeStamp+".png";
 			//take screenshot
-			page.screenshot(new Page.ScreenshotOptions()
+			byte[] screenshotBytes=page.screenshot(new Page.ScreenshotOptions()
 					.setPath(Paths.get(screenshotName)));
+			//Attach screenshot to allure report
+			Allure.addAttachment(testName+"-Screenshot","img/png", 
+					new java.io.ByteArrayInputStream(screenshotBytes), ".png");
 			
 			//create trace directory
 			String traceDir = "test-traces";
@@ -115,6 +121,15 @@ public class BaseTest {
 			
 			context.tracing().stop(new Tracing.StopOptions()
 					.setPath(Paths.get(traceFileName)));
+			//Attach trace to allure reports
+			try {
+				Allure.addAttachment(testName+"-Playwright Trace", "application/zip", new FileInputStream(traceFileName),".zip");
+			}
+			catch(IOException e){
+				e.printStackTrace();
+			}
+			
+			
 			}
 			else {
 				context.tracing().stop();
