@@ -38,12 +38,7 @@
     <version>2.32.0</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
-<dependency>
-    <groupId>org.aspectj</groupId>
-    <artifactId>aspectjweaver</artifactId>
-    <version>1.9.25.1</version>
-    <scope>runtime</scope>
-</dependency>
+
     <dependency>
       <groupId>com.microsoft.playwright</groupId>
       <artifactId>playwright</artifactId>
@@ -62,7 +57,22 @@
           <suiteXmlFiles>
             <suiteXmlFile>testng.xml</suiteXmlFile>
           </suiteXmlFiles>
+          <!-- NEW: Tell JVM to load AspectJ agent when running tests -->
+        <argLine>
+            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.25.1/aspectjweaver-1.9.25.1.jar"
+        </argLine>
+        <!-- NEW: Specify where Allure should save test results -->
+        <systemPropertyVariables>
+            <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
+        </systemPropertyVariables>
         </configuration>
+        <dependencies>
+        <dependency>
+    <groupId>org.aspectj</groupId>
+    <artifactId>aspectjweaver</artifactId>
+    <version>1.9.25.1</version>
+</dependency>
+</dependencies>
       </plugin>
       <plugin>
     <groupId>io.qameta.allure</groupId>
