@@ -11,6 +11,11 @@ test-output/
 # Maven build files
 target/
 
+# Allure Reports - Generated locally and in CI/CD
+allure-results/
+allure-report/
+.allure/
+
 # IDE files
 .classpath
 .project

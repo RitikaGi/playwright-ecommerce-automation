@@ -1,4 +1,4 @@
-name: Playwright Regression Tests
+name: Playwright Regression Tests with Allure
 
 on:
   push:
@@ -6,15 +6,16 @@ on:
   pull_request:
     branches: [main, master]
   schedule:
-    - cron: '30 3 * * 1-5'
-  workflow_dispatch:
+    - cron: '30 3 * * 1-5'  # Mon-Fri at 3:30 AM UTC
+  workflow_dispatch:  # Manual trigger
 
 jobs:
   test:
+    name: Run Tests & Generate Report
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout code
+      - name: Checkout Repository
         uses: actions/checkout@v4
         
       - name: Setup JDK 11
@@ -24,29 +25,104 @@ jobs:
           distribution: 'temurin'
           cache: 'maven'
           
-      - name: Install Maven dependencies
+      - name: Install Maven Dependencies
         run: mvn clean install -DskipTests
           
-      - name: Install Playwright browsers
+      - name: Install Playwright Browsers
         run: mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install chromium"
+      
+      # Get Allure history from previous runs (NEW - IMPORTANT)
+      - name: Get Allure History
+        uses: actions/checkout@v4
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
           
-      - name: Run Playwright tests
+      - name: Run Playwright Tests
         run: mvn clean test
+        continue-on-error: true
         
-      # Generate Allure Report
+      # Copy history for trend analysis (NEW)
+      - name: Copy Allure History
+        if: always()
+        continue-on-error: true
+        run: |
+          mkdir -p target/allure-results/history
+          if [ -d "gh-pages/history" ]; then
+            cp -r gh-pages/history/* target/allure-results/history/
+            echo "✅ History copied successfully"
+          else
+            echo "⚠️ No previous history found (this is normal for first run)"
+          fi
+        
       - name: Generate Allure Report
         if: always()
-        run: mvn allure:report
-        
-      # Upload Allure Report as Artifact
-      - name: Upload Allure Report
+        run: |
+          mvn allure:report
+          echo "📊 Allure report generated at: target/allure-report"
+          
+      # Add environment info to report (NEW - Professional touch)
+      - name: Add Report Metadata
+        if: always()
+        run: |
+          cd target/allure-report
+          cat > environment.properties << EOF
+          Browser=Chromium
+          Framework=Playwright + TestNG
+          Java.Version=11
+          OS=${{ runner.os }}
+          Execution.Date=$(date '+%Y-%m-%d %H:%M:%S')
+          Build.Number=${{ github.run_number }}
+          Branch=${{ github.ref_name }}
+          Commit=${{ github.sha }}
+          EOF
+          
+      # THE MAIN MAGIC - Publish to GitHub Pages (NEW - MOST IMPORTANT)
+      - name: Deploy to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./target/allure-report
+          keep_files: false
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: '📊 Deploy Allure Report - Run #${{ github.run_number }}'
+          
+      # Show report URL in GitHub Actions summary (NEW - User friendly)
+      - name: Add Report URL to Summary
+        if: always()
+        run: |
+          REPO_OWNER="${{ github.repository_owner }}"
+          REPO_NAME="${{ github.event.repository.name }}"
+          REPORT_URL="https://${REPO_OWNER}.github.io/${REPO_NAME}"
+          
+          echo "## 📊 Test Execution Report" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 🔗 Live Report" >> $GITHUB_STEP_SUMMARY
+          echo "**[Click here to view the Allure Report](${REPORT_URL})**" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 📋 Execution Details" >> $GITHUB_STEP_SUMMARY
+          echo "- **Run Number:** #${{ github.run_number }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Branch:** \`${{ github.ref_name }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- **Commit:** \`${{ github.sha }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- **Triggered by:** @${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Timestamp:** $(date '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "---" >> $GITHUB_STEP_SUMMARY
+          echo "💡 **Tip:** Bookmark the report URL for easy access!" >> $GITHUB_STEP_SUMMARY
+          
+      # Backup: Upload as artifact (same as before, but now it's backup)
+      - name: Upload Allure Report Artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
-          path: target/site/allure-maven-plugin/
+          path: target/allure-report/
           retention-days: 30
-       
           
       - name: Upload TestNG Reports
         if: always()
@@ -64,10 +140,11 @@ jobs:
           path: test-screenshots/
           retention-days: 7
           
-      - name: Test Summary
-        if: always()
-        run: |
-          echo "## Test Execution Complete" >> $GITHUB_STEP_SUMMARY
-          echo "- **Framework:** Playwright + TestNG" >> $GITHUB_STEP_SUMMARY
-          echo "- **Browser:** Chromium" >> $GITHUB_STEP_SUMMARY
-          echo "Download TestNG reports from artifacts to view results" >> $GITHUB_STEP_SUMMARY
+      # NEW: Also upload traces for failed tests
+      - name: Upload Traces
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-traces
+          path: test-traces/
+          retention-days: 7

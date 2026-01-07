@@ -110,7 +110,7 @@ public class BaseTest {
 			byte[] screenshotBytes=page.screenshot(new Page.ScreenshotOptions()
 					.setPath(Paths.get(screenshotName)));
 			//Attach screenshot to allure report
-			Allure.addAttachment(testName+"-Screenshot","img/png", 
+			Allure.addAttachment(testName+"-Screenshot","image/png", 
 					new java.io.ByteArrayInputStream(screenshotBytes), ".png");
 			
 			//create trace directory
@@ -123,17 +123,27 @@ public class BaseTest {
 					.setPath(Paths.get(traceFileName)));
 			//Attach trace to allure reports
 			try {
-				Allure.addAttachment(testName+"-Playwright Trace", "application/zip", new FileInputStream(traceFileName),".zip");
+				Allure.addAttachment(testName+"-Playwright Trace", "application/zip",
+						new FileInputStream(traceFileName),".zip");
 			}
 			catch(IOException e){
 				e.printStackTrace();
 			}
+			// NEW: Add failure reason to Allure
+	        if(result.getThrowable() != null) {
+	            Allure.addAttachment("Failure Reason", "text/plain", 
+	                result.getThrowable().getMessage());
+	        }
+	    }
+	    else {
+	        context.tracing().stop();
+	    }
+	    
+	    // NEW: Add test execution time
+	    long duration = result.getEndMillis() - result.getStartMillis();
+	    Allure.addAttachment("Execution Time", "text/plain", 
+	        duration + " ms (" + (duration/1000.0) + " seconds)");
 			
-			
-			}
-			else {
-				context.tracing().stop();
-			}
 			if(browser!=null) browser.close();
 			if(playwright!=null) playwright.close();
 		}
