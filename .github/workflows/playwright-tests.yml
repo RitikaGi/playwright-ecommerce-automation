@@ -6,8 +6,8 @@ on:
   pull_request:
     branches: [main, master]
   schedule:
-    - cron: '30 3 * * 1-5'  # Mon-Fri at 3:30 AM UTC
-  workflow_dispatch:  # Manual trigger
+    - cron: '30 3 * * 1-5'
+  workflow_dispatch:
 
 jobs:
   test:
@@ -31,7 +31,6 @@ jobs:
       - name: Install Playwright Browsers
         run: mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install chromium"
       
-      # Get Allure history from previous runs (NEW - IMPORTANT)
       - name: Get Allure History
         uses: actions/checkout@v4
         if: always()
@@ -44,7 +43,6 @@ jobs:
         run: mvn clean test
         continue-on-error: true
         
-      # Copy history for trend analysis (NEW)
       - name: Copy Allure History
         if: always()
         continue-on-error: true
@@ -52,18 +50,17 @@ jobs:
           mkdir -p target/allure-results/history
           if [ -d "gh-pages/history" ]; then
             cp -r gh-pages/history/* target/allure-results/history/
-            echo "✅ History copied successfully"
+            echo "History copied successfully"
           else
-            echo "⚠️ No previous history found (this is normal for first run)"
+            echo "No previous history found - this is normal for first run"
           fi
         
       - name: Generate Allure Report
         if: always()
         run: |
           mvn allure:report
-          echo "📊 Allure report generated at: target/allure-report"
+          echo "Allure report generated at: target/allure-report"
           
-      # Add environment info to report (NEW - Professional touch)
       - name: Add Report Metadata
         if: always()
         run: |
@@ -79,7 +76,6 @@ jobs:
           Commit=${{ github.sha }}
           EOF
           
-      # THE MAIN MAGIC - Publish to GitHub Pages (NEW - MOST IMPORTANT)
       - name: Deploy to GitHub Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v3
@@ -90,9 +86,8 @@ jobs:
           keep_files: false
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
-          commit_message: '📊 Deploy Allure Report - Run #${{ github.run_number }}'
+          commit_message: 'Deploy Allure Report - Run #${{ github.run_number }}'
           
-      # Show report URL in GitHub Actions summary (NEW - User friendly)
       - name: Add Report URL to Summary
         if: always()
         run: |
@@ -100,12 +95,12 @@ jobs:
           REPO_NAME="${{ github.event.repository.name }}"
           REPORT_URL="https://${REPO_OWNER}.github.io/${REPO_NAME}"
           
-          echo "## 📊 Test Execution Report" >> $GITHUB_STEP_SUMMARY
+          echo "## Test Execution Report" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### 🔗 Live Report" >> $GITHUB_STEP_SUMMARY
+          echo "### Live Report" >> $GITHUB_STEP_SUMMARY
           echo "**[Click here to view the Allure Report](${REPORT_URL})**" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### 📋 Execution Details" >> $GITHUB_STEP_SUMMARY
+          echo "### Execution Details" >> $GITHUB_STEP_SUMMARY
           echo "- **Run Number:** #${{ github.run_number }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Branch:** \`${{ github.ref_name }}\`" >> $GITHUB_STEP_SUMMARY
           echo "- **Commit:** \`${{ github.sha }}\`" >> $GITHUB_STEP_SUMMARY
@@ -113,9 +108,8 @@ jobs:
           echo "- **Timestamp:** $(date '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "---" >> $GITHUB_STEP_SUMMARY
-          echo "💡 **Tip:** Bookmark the report URL for easy access!" >> $GITHUB_STEP_SUMMARY
+          echo "**Tip:** Bookmark the report URL for easy access!" >> $GITHUB_STEP_SUMMARY
           
-      # Backup: Upload as artifact (same as before, but now it's backup)
       - name: Upload Allure Report Artifact
         if: always()
         uses: actions/upload-artifact@v4
@@ -140,7 +134,6 @@ jobs:
           path: test-screenshots/
           retention-days: 7
           
-      # NEW: Also upload traces for failed tests
       - name: Upload Traces
         if: failure()
         uses: actions/upload-artifact@v4
