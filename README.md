@@ -139,7 +139,7 @@ Before running the tests, ensure you have the following installed:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/YourUsername/playwright-ecommerce-automation.git
+git clone https://github.com/RitikaGi/playwright-ecommerce-automation.git
 cd playwright-ecommerce-automation
 ```
 
@@ -153,15 +153,13 @@ mvn clean install -DskipTests
 mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install chromium"
 ```
 
-### 4. Configure Test Environment (Optional)
+### 4. Configure Test Environment 
 Edit `src/test/resources/config.properties`:
 ```properties
 baseUrl=https://www.saucedemo.com
 browser=chrome
 headless=auto
 ```
-
-**Note:** Replace `YourUsername` in clone URL with your actual GitHub username
 
 ## 🏃‍♂️ Running Tests
 
@@ -219,13 +217,6 @@ mvn allure:serve
 #### Live Report
 🔗 **[View Latest Test Report](https://ritikagi.github.io/playwright-ecommerce-automation/)**
 
-*Note: Replace the URL above with your actual GitHub Pages URL*
-
-#### Sample Report
-![Allure Report Overview](path-to-screenshot)
-
-*Tip: You can add your Allure report screenshot to the repo and link it here*
-
 ## 🔄 CI/CD Pipeline
 
 ### GitHub Actions Workflow
@@ -251,7 +242,7 @@ Location: `.github/workflows/playwright-tests.yml`
 
 ### Viewing CI/CD Results
 - Go to **Actions** tab in your GitHub repository
-- Click on latest work
+- Click on latest workflow run
 
 ## 🐛 Known Issues
 
